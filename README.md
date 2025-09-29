@@ -13,7 +13,7 @@ ParentShopper is a shopping guide and personal buying assistant for parents acro
 - **Frontend:** Pure HTML5, CSS3, JavaScript (ES6+)
 - **Styling:** Custom CSS with CSS Custom Properties (no frameworks)
 - **Fonts:** Google Fonts (Outfit for headings, Inter for body text)
-- **Hosting:** Netlify (free tier)
+- **Hosting:** GitHub Pages (free tier)
 - **Deployment:** GitHub integration with automatic SSL and global CDN
 
 ## File Structure
@@ -33,6 +33,8 @@ ParentShopper is a shopping guide and personal buying assistant for parents acro
 │   ├── sleep.html
 │   └── safety.html
 ├── reviews/                      # Product review articles
+│   ├── index.html               # Reviews index page
+│   ├── best-baby-monitor-uk-2025.html
 │   ├── best-pushchairs-small-cars-2025.html
 │   └── urbanglide-pro-review.html
 ├── guides/                       # Buying guide articles
@@ -102,7 +104,7 @@ ParentShopper is a shopping guide and personal buying assistant for parents acro
 
 #### Comparison Review (Most Common)
 1. Create a new HTML file in the `reviews/` directory
-2. Use `best-pushchairs-small-cars-2025.html` as a template
+2. Use `best-baby-monitor-uk-2025.html` as a template
 3. Structure should include:
    - Quick Answer Box (30-second solution)
    - Problem Explanation
@@ -156,18 +158,17 @@ Every page must include:
 
 ## Deployment
 
-### Netlify Setup
-1. Connect GitHub repository to Netlify
-2. Set build command: (none needed for static site)
-3. Set publish directory: `/` (root)
-4. Enable automatic SSL
-5. Configure custom domain if needed
+### GitHub Pages Setup
+1. Repository is already connected to GitHub
+2. Enable GitHub Pages in repository settings
+3. Set source to "Deploy from a branch" → "main"
+4. Site will be available at: `https://jaimev365.github.io/parentshopper/`
 
 ### GitHub Workflow
 1. Make changes locally
 2. Commit and push to main branch
-3. Netlify automatically deploys changes
-4. Check deployment status in Netlify dashboard
+3. GitHub Pages automatically deploys changes
+4. Check deployment status in repository Actions tab
 
 ## Maintenance
 
