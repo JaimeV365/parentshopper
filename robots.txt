@@ -6,3 +6,5 @@ Sitemap: https://parentshopper.co.uk/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
+
+

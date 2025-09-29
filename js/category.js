@@ -271,3 +271,5 @@ function getStarRating(rating) {
     stars += '☆'.repeat(emptyStars);
     return stars;
 }
+
+
