@@ -38,6 +38,9 @@ coverage/
 tmp/
 temp/
 
+# Temporary files - DO NOT PUSH
+temp-REMOVE LATER-DO NOT PUSH/
+
 # Build outputs
 dist/
 build/
