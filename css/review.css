@@ -47,29 +47,186 @@
   margin: 0 auto var(--spacing-lg);
 }
 
-/* Quick Answer Box */
-.quick-answer {
-  background: white;
-  border: 2px solid var(--color-accent);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-md);
+/* Modern Quick Answer Section */
+.quick-answer-modern {
+  background: linear-gradient(135deg, #FAFBFC 0%, #F7F8FA 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
   margin-top: var(--spacing-lg);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #E5E7EB;
 }
 
-.quick-answer h2 {
-  color: var(--color-accent);
+.quick-answer-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.quick-answer-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+  display: block;
+}
+
+.quick-answer-modern h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.quick-answer-subtitle {
+  color: var(--color-secondary);
+  font-size: 1.125rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.quick-answer-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: 1fr;
+  margin-bottom: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .quick-answer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.quick-answer-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-answer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.quick-answer-card.primary-pick {
+  border-color: #6B7280;
+  background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+}
+
+.quick-answer-card.runner-up {
+  border-color: #6B7280;
+  background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+}
+
+.quick-answer-card.budget-pick {
+  border-color: #6B7280;
+  background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.pick-badge {
+  background: #374151;
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.primary-pick .pick-badge {
+  background: #4B5563;
+}
+
+.runner-up .pick-badge {
+  background: #4B5563;
+}
+
+.budget-pick .pick-badge {
+  background: #4B5563;
+}
+
+.card-icon {
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.quick-answer-card h3 {
+  color: var(--color-primary);
   margin-bottom: var(--spacing-sm);
   font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
-.quick-answer p {
-  margin-bottom: 0;
+.price-tag {
+  background: var(--color-background-subtle);
+  color: var(--color-accent);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: var(--spacing-md);
+}
+
+.card-description {
+  color: var(--color-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.key-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.benefit-tag {
+  background: rgba(75, 85, 99, 0.08);
+  color: #374151;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(75, 85, 99, 0.15);
+}
+
+.budget-pick .benefit-tag:last-child {
+  background: rgba(107, 114, 128, 0.08);
+  color: #4B5563;
+  border-color: rgba(107, 114, 128, 0.15);
+}
+
+.quick-answer-summary {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border-left: 4px solid #F59E0B;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.quick-answer-summary p {
+  margin: 0;
+  color: var(--color-secondary);
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.quick-answer-summary strong {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 /* Problem Section */
@@ -81,6 +238,7 @@
 .problem-section h2 {
   color: var(--color-primary);
   margin-bottom: var(--spacing-md);
+  text-align: left;
 }
 
 .problem-section p {
@@ -97,7 +255,7 @@
 }
 
 .recommendations h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--spacing-lg);
   color: var(--color-primary);
 }
@@ -194,7 +352,7 @@
 }
 
 .comparison-table h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--spacing-lg);
   color: var(--color-primary);
 }
@@ -238,7 +396,7 @@
 }
 
 .what-to-avoid h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--spacing-lg);
   color: var(--color-primary);
 }
@@ -311,7 +469,7 @@
 }
 
 .faq h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--spacing-lg);
   color: var(--color-primary);
 }
@@ -415,7 +573,7 @@
 }
 
 .quick-facts h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--spacing-lg);
   color: var(--color-primary);
 }
@@ -456,7 +614,7 @@
 }
 
 .real-experience h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--spacing-lg);
   color: var(--color-primary);
 }
@@ -500,7 +658,7 @@
 }
 
 .detailed-analysis h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--spacing-lg);
   color: var(--color-primary);
 }
@@ -533,7 +691,7 @@
 }
 
 .alternatives h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--spacing-lg);
   color: var(--color-primary);
 }
@@ -581,13 +739,35 @@
     font-size: 1.25rem;
   }
   
-  .quick-answer {
+  .quick-answer-modern {
     margin: var(--spacing-md);
-    padding: var(--spacing-sm);
+    padding: var(--spacing-lg);
   }
   
-  .quick-answer h2 {
+  .quick-answer-modern h2 {
+    font-size: 1.5rem;
+  }
+  
+  .quick-answer-subtitle {
+    font-size: 1rem;
+  }
+  
+  .quick-answer-card {
+    padding: var(--spacing-md);
+  }
+  
+  .quick-answer-card h3 {
     font-size: 1.125rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .card-icon {
+    align-self: flex-end;
   }
   
   .product-hero-details h2 {
