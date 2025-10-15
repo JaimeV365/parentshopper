@@ -35,8 +35,8 @@ ParentShopper is a shopping guide and personal buying assistant for parents acro
 ├── reviews/                      # Product review articles
 │   ├── index.html               # Reviews index page
 │   ├── best-baby-monitor-uk-2025.html
-│   ├── best-pushchairs-small-cars-2025.html
-│   └── urbanglide-pro-review.html
+│   ├── best-pushchairs-uk-2025.html
+│   └── best-pushchairs-uk-2025.html
 ├── guides/                       # Buying guide articles
 │   └── first-time-parents.html
 ├── css/                          # Stylesheets
@@ -116,7 +116,7 @@ ParentShopper is a shopping guide and personal buying assistant for parents acro
 
 #### Individual Product Review
 1. Create a new HTML file in the `reviews/` directory
-2. Use `urbanglide-pro-review.html` as a template
+2. Use `best-pushchairs-uk-2025.html` as a template
 3. Structure should include:
    - Product hero section with verdict
    - Quick Facts box
