@@ -5,10 +5,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.nav');
     
+    console.log('Mobile menu elements found:', {
+        toggle: !!mobileMenuToggle,
+        nav: !!nav
+    });
+    
     if (mobileMenuToggle && nav) {
         mobileMenuToggle.addEventListener('click', function() {
+            console.log('Mobile menu clicked');
             nav.classList.toggle('mobile-menu-open');
             mobileMenuToggle.classList.toggle('active');
+            console.log('Mobile menu classes:', {
+                navClasses: nav.className,
+                toggleClasses: mobileMenuToggle.className
+            });
+        });
+    } else {
+        console.error('Mobile menu elements not found:', {
+            toggle: mobileMenuToggle,
+            nav: nav
         });
     }
     
