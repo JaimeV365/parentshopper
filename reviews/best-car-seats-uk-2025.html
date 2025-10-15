@@ -228,6 +228,13 @@
             list-style: none;
             padding-left: 0;
         }
+        
+        /* Responsive 2x2 grid for What We Learned and Final Verdict sections */
+        @media (max-width: 768px) {
+            .learnings-grid, .verdict-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
     </style>
     
     <!-- Schema.org markup for Product -->
@@ -1067,7 +1074,7 @@
                     Over seven years of parenting two children, we used five different car seats, making just about every learning experience possible. Here's what we actually owned and what we learned:
                 </p>
                 
-                <div class="learnings-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <div class="learnings-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem 0;">
                     <div class="learning-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); border: 1px solid #E5E7EB;">
                         <h3 style="color: #059669; font-weight: 500; margin-bottom: 1rem; font-size: 1rem;">Stage 1: Birth to ~4 years (Child 1)</h3>
                         <p style="font-size: 0.875rem; color: #4B5563; margin-bottom: 0; line-height: 1.6;"><strong>Joie i-Spin 360 i-Size</strong> - £299 (purchased 2018). We bought this for our first child based on extensive research prioritizing rotation and extended rear-facing capability. It was worth every penny. The 360° rotation genuinely transformed daily life, especially during the 6-month to 3-year period when our daughter was heavy but couldn't climb in herself.</p>
@@ -1164,7 +1171,7 @@
             <div class="container">
                 <h2>Final Verdict: Best Car Seats UK 2025 for Most Families</h2>
                 
-                <div class="verdict-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <div class="verdict-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem 0;">
                     <div class="verdict-box" style="background: white; border: 2px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #F59E0B;">
                         <h3 style="color: #F59E0B; margin-top: 0; margin-bottom: 1rem; font-size: 1.1rem;">Our Top Recommendation</h3>
                         <p style="margin: 0; color: #4B5563; line-height: 1.5;"><strong>Start with a rotating car seat for ages 0-4</strong>. The Joie i-Spin 360 i-Size transformed our daily life with young children, making getting them in and out dramatically easier.</p>

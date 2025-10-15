@@ -292,6 +292,13 @@
             list-style: none;
             padding-left: 0;
         }
+        
+        /* Responsive 2x2 grid for What We Learned and Final Verdict sections */
+        @media (max-width: 768px) {
+            .learnings-grid, .verdict-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
     </style>
     
     <!-- Schema.org markup for Product -->
@@ -1130,7 +1137,7 @@
             <div class="container">
                 <h2 id="what-we-learned">What We Learned: Why Refill Costs Matter More Than Bin Price UK</h2>
                 
-                <div class="learnings-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <div class="learnings-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem 0;">
                     <div class="learning-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); border: 1px solid #E5E7EB;">
                         <h3 style="color: #059669; font-weight: 500; margin-bottom: 1rem; font-size: 1rem;">Refill Cost Reality</h3>
                         <p style="font-size: 0.875rem; color: #4B5563; margin-bottom: 0; line-height: 1.6;">Official Tommee Tippee refills cost £25-40 monthly, while compatible refills work identically for £18-22 per 6-pack (3+ months). A £25 bin can cost £600-1,200 over 2.5 years with official refills.</p>
@@ -1214,7 +1221,7 @@
             <div class="container">
                 <h2>Final Verdict: Best Nappy Bin UK 2025 for Most Families</h2>
                 
-                <div class="verdict-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <div class="verdict-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem 0;">
                     <div class="verdict-box" style="background: white; border: 2px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #F59E0B;">
                         <h3 style="color: #F59E0B; margin-top: 0; margin-bottom: 1rem; font-size: 1.1rem;">Our Top Recommendation</h3>
                         <p style="margin: 0; color: #4B5563; line-height: 1.5;"><strong>Start with the Tommee Tippee Twist & Click</strong>. The individual wrapping system transformed our experience after expensive refills nearly made us switch to alternatives.</p>
