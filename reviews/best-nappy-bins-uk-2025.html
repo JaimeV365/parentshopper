@@ -20,9 +20,11 @@
     <link rel="preload" href="../css/styles.css" as="style">
     <link rel="preload" href="../css/review.css" as="style">
     
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@400;500&display=swap"></noscript>
+    <!-- Preload above-the-fold image -->
+    <link rel="preload" as="image" href="https://m.media-amazon.com/images/I/516ltDbcxdL._AC_SL1500_.jpg">
+    
+    <!-- Load fonts efficiently -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     
     <title>Best Nappy Bins UK 2025 - Save £150+ with Compatible Refills | ParentShopper</title>
     <meta name="description" content="After years of expensive Tommee Tippee refills, we discovered compatible bags that work perfectly for £20 instead of £40. Real UK parent review of 5 nappy bins including the Ubbi Steel and Korbell Classic.">
@@ -763,7 +765,8 @@
                             <a href="https://www.amazon.co.uk/dp/B08ZKJJFNK?&linkCode=ll1&tag=parentshopper-21&linkId=642c6e47bc68dc7d389603e2f9b3dc47&language=en_GB&ref_=as_li_ss_tl" target="_blank" rel="noopener">
                                 <img src="https://m.media-amazon.com/images/I/516ltDbcxdL._AC_SL1500_.jpg" 
                                      alt="Tommee Tippee Twist and Click nappy bin with individual nappy wrapping mechanism for smell-free disposal"
-                                     loading="lazy"
+                                     loading="eager"
+                                     fetchpriority="high"
                                      width="400"
                                      height="400"
                                      style="width: 100%; max-height: 400px; height: auto; object-fit: contain; border-radius: 8px;">
