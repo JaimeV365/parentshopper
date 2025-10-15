@@ -77,15 +77,11 @@
 .article-header h1 {
   margin-bottom: var(--spacing-sm);
   color: var(--color-primary);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .article-subtitle {
   font-size: 1.125rem;
   color: var(--color-secondary);
-  max-width: 600px;
   margin: 0 auto var(--spacing-lg);
 }
 
@@ -624,8 +620,6 @@
   display: grid;
   gap: var(--spacing-md);
   grid-template-columns: 1fr;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
