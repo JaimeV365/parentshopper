@@ -57,8 +57,14 @@
     <link rel="icon" type="image/x-icon" href="../images/brand/ParentShopper Logo.ico">
     <link rel="shortcut icon" type="image/x-icon" href="../images/brand/ParentShopper Logo.ico">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/review.css">
+    <link rel="stylesheet" href="../css/styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/review.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/review-components.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/review.css">
+        <link rel="stylesheet" href="../css/review-components.css">
+    </noscript>
     
     <style>
         /* ============================================
@@ -427,18 +433,17 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="../index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; font-weight: 500;">
+                    <a href="../index.html" class="logo-link">
                         <img src="../images/brand/ParentShopper logo.png" alt="" class="logo-image" width="83" height="84" loading="eager">
                         <span class="logo-text-brand">ParentShopper</span>
                     </a>
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="../categories/" class="nav-link" style="font-weight: 500;">Find Products</a></li>
-                        <li><a href="../reviews/" class="nav-link active" style="font-weight: 500;">Reviews</a></li>
-                        <li><a href="../guides/" class="nav-link" style="font-weight: 500;">Buying Guides</a></li>
-                        <li><a href="../index.html#quick-picks" class="nav-link" style="font-weight: 500;">Quick Picks</a></li>
-                        <li><a href="../about.html" class="nav-link" style="font-weight: 500;">About</a></li>
+                        <li><a href="../categories/" class="nav-link">Find Products</a></li>
+                        <li><a href="../reviews/" class="nav-link active">Reviews</a></li>
+                        <li><a href="../guides/" class="nav-link">Quick Picks</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
                     </ul>
                 </nav>
                 <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
@@ -453,8 +458,8 @@
     <!-- Breadcrumb -->
     <nav class="breadcrumb">
         <div class="container">
-            <a href="../index.html" style="font-weight: 500;">Home</a> > 
-            <a href="../reviews/" style="font-weight: 500;">Reviews</a> > 
+            <a href="../index.html" class="breadcrumb-link">Home</a> > 
+            <a href="../reviews/" class="breadcrumb-link">Reviews</a> > 
             <span aria-current="page">Best Baby Monitor UK 2025</span>
         </div>
     </nav>
@@ -463,17 +468,17 @@
     <article class="review-article" id="main-content">
         <header class="article-header">
             <div class="container">
-                <div class="article-meta" style="color: #4B5563; font-size: 0.9rem; margin-bottom: 1.5rem;">
+                <div class="article-meta">
                     <span>Baby Monitor Review</span>
                     <span class="article-date">Published: October 2025</span>
                     <span class="article-date">12 min read</span>
                 </div>
                 <h1>Best Baby Monitor UK 2025: The One That Stopped Destroying My Phone Battery</h1>
-                <div style="background: #F8FAFC; border-left: 4px solid #059669; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 8px; text-align: left;">
-                    <p style="color: #1f2937; font-size: 1rem; line-height: 1.7; margin-bottom: 0.75rem; font-weight: 500; max-width: none;">
+                <div class="article-summary">
+                    <p>
                         Finding the best baby monitor in the UK shouldn't destroy your phone battery.
                     </p>
-                    <p style="color: #4B5563; font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; max-width: none;">
+                    <p>
                         After app-based monitors literally killed our phone in 1 month through constant charging and heat, we discovered dedicated screen monitors that actually work. Here's our real UK parent review of the best baby monitors for 2025, including options for homes with thick walls.
                     </p>
                 </div>
@@ -987,10 +992,10 @@
         <!-- Alternative Retailers Note -->
         <section class="alternative-retailers">
             <div class="container">
-                <div style="background: #F3F4F6; border-left: 4px solid #059669; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
-                    <h3 style="margin-top: 0; font-family: 'Outfit', sans-serif; color: #1f2937;">Also Worth Checking</h3>
-                    <p style="margin-bottom: 0.5rem; max-width: none;"><strong>Boots.com baby monitor section</strong> often stocks quality alternatives with competitive pricing. If you're already shopping at Boots for baby health products, their monitor selection is worth browsing.</p>
-                    <p style="margin-bottom: 0; color: #4B5563; font-size: 0.95rem; max-width: none;">Boots also offers Click & Collect from 2,500+ UK stores, and their Advantage Card membership program lets you earn points on baby purchases for future savings.</p>
+                <div class="also-worth-checking">
+                    <h3>Also Worth Checking</h3>
+                    <p><strong>Boots.com baby monitor section</strong> often stocks quality alternatives with competitive pricing. If you're already shopping at Boots for baby health products, their monitor selection is worth browsing.</p>
+                    <p>Boots also offers Click & Collect from 2,500+ UK stores, and their Advantage Card membership program lets you earn points on baby purchases for future savings.</p>
                 </div>
             </div>
         </section>
@@ -1000,22 +1005,22 @@
             <div class="container">
                 <h2 id="what-we-learned">What We Learned: Why Dedicated Screen Baby Monitors Beat App Monitors UK</h2>
                 
-                <div class="learnings-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem 0;">
-                    <div class="learning-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); border: 1px solid #E5E7EB;">
-                        <h3 style="color: #059669; font-weight: 500; margin-bottom: 1rem; font-size: 1rem;">Battery Performance Reality</h3>
-                        <p style="font-size: 0.875rem; color: #4B5563; margin-bottom: 0; line-height: 1.6;">App-based monitors drain phones in 5-6 hours of continuous use, while dedicated monitors provide 6-20 hours on their own batteries. Phone damage from constant charging and heat is real and expensive.</p>
+                <div class="learnings-grid">
+                    <div class="learning-item">
+                        <h3>Battery Performance Reality</h3>
+                        <p>App-based monitors drain phones in 5-6 hours of continuous use, while dedicated monitors provide 6-20 hours on their own batteries. Phone damage from constant charging and heat is real and expensive.</p>
                     </div>
-                    <div class="learning-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); border: 1px solid #E5E7EB;">
-                        <h3 style="color: #059669; font-weight: 500; margin-bottom: 1rem; font-size: 1rem;">Reliability When It Matters</h3>
-                        <p style="font-size: 0.875rem; color: #4B5563; margin-bottom: 0; line-height: 1.6;">WiFi drops happen at the worst moments (2am, baby crying). Dedicated monitors work regardless of internet outages, with no app updates breaking functionality overnight.</p>
+                    <div class="learning-item">
+                        <h3>Reliability When It Matters</h3>
+                        <p>WiFi drops happen at the worst moments (2am, baby crying). Dedicated monitors work regardless of internet outages, with no app updates breaking functionality overnight.</p>
                     </div>
-                    <div class="learning-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); border: 1px solid #E5E7EB;">
-                        <h3 style="color: #059669; font-weight: 500; margin-bottom: 1rem; font-size: 1rem;">Family Usability</h3>
-                        <p style="font-size: 0.875rem; color: #4B5563; margin-bottom: 0; line-height: 1.6;">Grandparents and babysitters use dedicated monitors instantly. No app downloads, account setups, or WiFi passwords needed. Partners can grab the monitor without phone complications.</p>
+                    <div class="learning-item">
+                        <h3>Family Usability</h3>
+                        <p>Grandparents and babysitters use dedicated monitors instantly. No app downloads, account setups, or WiFi passwords needed. Partners can grab the monitor without phone complications.</p>
                     </div>
-                    <div class="learning-item" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); border: 1px solid #E5E7EB;">
-                        <h3 style="color: #059669; font-weight: 500; margin-bottom: 1rem; font-size: 1rem;">UK Housing Reality</h3>
-                        <p style="font-size: 0.875rem; color: #4B5563; margin-bottom: 0; line-height: 1.6;">Thick Victorian and Georgian walls defeat many WiFi monitors. Real-world range drops to one-third of marketing claims. Dedicated wireless monitors penetrate walls better than WiFi.</p>
+                    <div class="learning-item">
+                        <h3>UK Housing Reality</h3>
+                        <p>Thick Victorian and Georgian walls defeat many WiFi monitors. Real-world range drops to one-third of marketing claims. Dedicated wireless monitors penetrate walls better than WiFi.</p>
                     </div>
                 </div>
             </div>
@@ -1084,40 +1089,40 @@
             <div class="container">
                 <h2>Final Verdict: Best Baby Monitor UK 2025 for Most Families</h2>
                 
-                <div class="verdict-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem 0;">
-                    <div class="verdict-box" style="background: white; border: 2px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #F59E0B;">
-                        <h3 style="color: #F59E0B; margin-top: 0; margin-bottom: 1rem; font-size: 1.1rem;">Our Top Recommendation</h3>
-                        <p style="margin: 0; color: #4B5563; line-height: 1.5;"><strong>Start with a reliable dedicated screen monitor</strong>. The WiseNet BabyView Eco Flex transformed our experience after app-based monitors created more problems than they solved.</p>
+                <div class="verdict-grid">
+                    <div class="verdict-box">
+                        <h3>Our Top Recommendation</h3>
+                        <p><strong>Start with a reliable dedicated screen monitor</strong>. The WiseNet BabyView Eco Flex transformed our experience after app-based monitors created more problems than they solved.</p>
                     </div>
                     
-                    <div class="verdict-box" style="background: white; border: 2px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #F59E0B;">
-                        <h3 style="color: #F59E0B; margin-top: 0; margin-bottom: 1rem; font-size: 1.1rem;">Cost Reality</h3>
-                        <p style="margin: 0; color: #4B5563; line-height: 1.5;">The around £90 investment proved far cheaper than replacing the phone destroyed by app-based monitoring. More importantly, it eliminated the 2am frustration of connectivity failures.</p>
+                    <div class="verdict-box">
+                        <h3>Cost Reality</h3>
+                        <p>The around £90 investment proved far cheaper than replacing the phone destroyed by app-based monitoring. More importantly, it eliminated the 2am frustration of connectivity failures.</p>
                     </div>
                     
-                    <div class="verdict-box" style="background: white; border: 2px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #F59E0B;">
-                        <h3 style="color: #F59E0B; margin-top: 0; margin-bottom: 1rem; font-size: 1.1rem;">What We Gained</h3>
-                        <ul style="margin: 0; padding-left: 1.2rem; color: #4B5563; line-height: 1.5;">
-                    <li>Phones that maintain normal battery health</li>
+                    <div class="verdict-box">
+                        <h3>What We Gained</h3>
+                        <ul>
+                            <li>Phones that maintain normal battery health</li>
                             <li>Monitoring that works regardless of WiFi</li>
                             <li>Grandparents can use instantly</li>
                             <li>Peace of mind even if technology fails</li>
-                </ul>
+                        </ul>
                     </div>
                     
-                    <div class="verdict-box" style="background: white; border: 2px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #F59E0B;">
-                        <h3 style="color: #F59E0B; margin-top: 0; margin-bottom: 1rem; font-size: 1.1rem;">Alternative Options</h3>
-                        <p style="margin: 0; color: #4B5563; line-height: 1.5;"><strong>For parents with twins</strong>, spend the extra £50-80 for the Babysense Split-Screen. For strict budgets, the HelloBaby HB6550 offers excellent value with outstanding battery life.</p>
+                    <div class="verdict-box">
+                        <h3>Alternative Options</h3>
+                        <p><strong>For parents with twins</strong>, spend the extra £50-80 for the Babysense Split-Screen. For strict budgets, the HelloBaby HB6550 offers excellent value with outstanding battery life.</p>
                     </div>
                 </div>
                 
-                <div class="final-message" style="background: #F8FAFC; border: 2px solid #E5E7EB; border-left: 4px solid #F59E0B; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
-                    <p style="margin: 0 0 1rem 0; color: #4B5563; line-height: 1.6; font-size: 1.05rem;"><strong>Bottom line:</strong> Whatever you choose, <strong>protect your phone battery and sanity by choosing a dedicated screen</strong> rather than turning expensive smartphones into single-purpose monitoring devices.</p>
-                    <p style="margin: 0; color: #4B5563; line-height: 1.6; font-size: 1.05rem;">We learned this lesson the hard way. You don't have to.</p>
+                <div class="final-message">
+                    <p><strong>Bottom line:</strong> Whatever you choose, <strong>protect your phone battery and sanity by choosing a dedicated screen</strong> rather than turning expensive smartphones into single-purpose monitoring devices.</p>
+                    <p>We learned this lesson the hard way. You don't have to.</p>
                 </div>
                 
-                <div class="related-guides" style="text-align: center; margin: 2rem 0; padding: 1.5rem; background: #F8FAFC; border-radius: 12px;">
-                    <p style="margin: 0; color: #6B7280; font-size: 0.95rem; max-width: none;">After establishing your monitoring setup, explore our guides on <a href="best-bottle-prep-machines-uk-2025.html" style="color: #059669; font-weight: 500; text-decoration: none;">bottle preparation systems</a> and <a href="best-nappy-bins-uk-2025.html" style="color: #059669; font-weight: 500; text-decoration: none;">nappy disposal solutions</a>.</p>
+                <div class="related-guides">
+                    <p>After establishing your monitoring setup, explore our guides on <a href="best-bottle-prep-machines-uk-2025.html">bottle preparation systems</a> and <a href="best-nappy-bins-uk-2025.html">nappy disposal solutions</a>.</p>
                 </div>
             </div>
         </section>
@@ -1126,44 +1131,48 @@
         <section class="featured">
             <div class="container">
                 <h2 class="section-title">Related Articles</h2>
-                <div class="featured-grid">
-                    <div class="featured-card">
-                        <div class="product-preview">
-                            <img src="https://m.media-amazon.com/images/I/61cW6NGbhPL._AC_SL1500_.jpg" 
-                                 alt="Best Pushchairs UK 2025" 
-                                 style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                <div class="related-articles-grid">
+                    <div class="related-article-card">
+                        <img src="https://m.media-amazon.com/images/I/61cW6NGbhPL._AC_SL1500_.jpg" 
+                             alt="Best Pushchairs UK 2025" 
+                             class="related-article-image"
+                             loading="lazy">
+                        <div class="related-article-content">
                             <h3>Best Pushchairs UK 2025</h3>
-                            <p class="product-verdict">Tested in real car boots and daily use</p>
+                            <p>Tested in real car boots and daily use</p>
                             <a href="best-pushchairs-uk-2025.html" class="btn btn-primary">Read Review</a>
                         </div>
                     </div>
-                    <div class="featured-card">
-                        <div class="product-preview">
-                            <img src="https://m.media-amazon.com/images/I/71qeHpuRooL._AC_SL1500_.jpg" 
-                                 alt="Best Bottle Prep Machines UK 2025" 
-                                 style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    <div class="related-article-card">
+                        <img src="https://m.media-amazon.com/images/I/71qeHpuRooL._AC_SL1500_.jpg" 
+                             alt="Best Bottle Prep Machines UK 2025" 
+                             class="related-article-image"
+                             loading="lazy">
+                        <div class="related-article-content">
                             <h3>Best Bottle Prep Machines UK 2025</h3>
-                            <p class="product-verdict">Save 60+ minutes daily with the right machine</p>
+                            <p>Save 60+ minutes daily with the right machine</p>
                             <a href="best-bottle-prep-machines-uk-2025.html" class="btn btn-primary">Read Review</a>
                         </div>
                     </div>
-                    <div class="featured-card">
-                        <div class="product-preview">
-                            <img src="https://m.media-amazon.com/images/I/516ltDbcxdL._AC_SL1500_.jpg" 
-                                 alt="Best Nappy Bins UK 2025" 
-                                 style="width: 100%; height: 200px; object-fit: contain; border-radius: 8px; background-color: #f8f9fa;">
+                    <div class="related-article-card">
+                        <img src="https://m.media-amazon.com/images/I/516ltDbcxdL._AC_SL1500_.jpg" 
+                             alt="Best Nappy Bins UK 2025" 
+                             class="related-article-image"
+                             loading="lazy">
+                        <div class="related-article-content">
                             <h3>Best Nappy Bins UK 2025</h3>
-                            <p class="product-verdict">Eliminate smells and save £150+ annually</p>
+                            <p>Eliminate smells and save £150+ annually</p>
                             <a href="best-nappy-bins-uk-2025.html" class="btn btn-primary">Read Review</a>
                         </div>
                     </div>
-                    <div class="featured-card">
-                        <div class="product-preview">
-                            <img src="https://m.media-amazon.com/images/I/81uW9ZRn8FL._AC_SL1500_.jpg" 
-                                 alt="Best Travel Cots UK 2025" 
-                                 style="width: 100%; height: 200px; object-fit: contain; border-radius: 8px; background-color: #ffffff;">
+                    <div class="related-article-card">
+                        <img src="https://m.media-amazon.com/images/I/81uW9ZRn8FL._AC_SL1500_.jpg" 
+                             alt="Best Travel Cots UK 2025" 
+                             class="related-article-image"
+                             loading="lazy">
+                        <div class="related-article-content">
                             <h3>Best Travel Cots UK 2025</h3>
-                            <p class="product-verdict">Portable sleep solutions that actually work</p>
+                            <p>Portable sleep solutions that actually work</p>
                             <a href="best-travel-cots-uk-2025.html" class="btn btn-primary">Read Review</a>
                         </div>
                     </div>
