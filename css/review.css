@@ -44,11 +44,11 @@
 
 /* Article Header */
 .review-article {
-  background-color: var(--color-background);
+  background-color: var(--color-background-subtle);
 }
 
 .article-header {
-  background: linear-gradient(135deg, var(--color-background-subtle) 0%, var(--color-background) 100%);
+  background-color: var(--color-background-subtle);
   padding: var(--spacing-xl) 0;
   text-align: center;
 }
@@ -270,7 +270,7 @@
 /* Problem Section */
 .problem-section {
   padding: var(--spacing-xl) 0;
-  background-color: var(--color-background);
+  background-color: var(--color-background-subtle);
 }
 
 .problem-section h2 {
@@ -386,7 +386,7 @@
 /* Comparison Table */
 .comparison-table {
   padding: var(--spacing-xl) 0;
-  background-color: var(--color-background);
+  background-color: var(--color-background-subtle);
 }
 
 .comparison-table h2 {
@@ -475,7 +475,7 @@
 /* Methodology */
 .methodology {
   padding: var(--spacing-xl) 0;
-  background-color: var(--color-background);
+  background-color: var(--color-background-subtle);
 }
 
 .methodology h2 {
@@ -536,7 +536,7 @@
 /* Affiliate Disclosure */
 .affiliate-disclosure {
   padding: var(--spacing-md) 0;
-  background-color: var(--color-background);
+  background-color: var(--color-background-subtle);
   border-top: 1px solid #E5E7EB;
 }
 
@@ -607,7 +607,7 @@
 /* Quick Facts */
 .quick-facts {
   padding: var(--spacing-xl) 0;
-  background-color: var(--color-background);
+  background-color: var(--color-background-subtle);
 }
 
 .quick-facts h2 {
@@ -690,7 +690,7 @@
 /* Detailed Analysis */
 .detailed-analysis {
   padding: var(--spacing-xl) 0;
-  background-color: var(--color-background);
+  background-color: var(--color-background-subtle);
 }
 
 .detailed-analysis h2 {

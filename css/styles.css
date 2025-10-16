@@ -50,7 +50,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-primary);
-  background-color: var(--color-background);
+  background-color: var(--color-background-subtle);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
