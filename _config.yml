@@ -1,7 +1,7 @@
 # Jekyll Configuration for ParentShopper
 title: ParentShopper
 description: Real parent reviews for real parents. No sponsored content, just honest recommendations.
-baseurl: "/parentshopper"
+baseurl: ""
 url: "https://jaimev365.github.io"
 
 # Build settings
@@ -20,18 +20,6 @@ exclude:
 include:
   - _includes
 
-# Collections
-collections:
-  reviews:
-    output: true
-    permalink: /:collection/:name/
-  categories:
-    output: true
-    permalink: /:collection/:name/
-  guides:
-    output: true
-    permalink: /:collection/:name/
-
 # Defaults
 defaults:
   - scope:
@@ -39,18 +27,3 @@ defaults:
       type: "pages"
     values:
       layout: "default"
-  - scope:
-      path: ""
-      type: "reviews"
-    values:
-      layout: "review"
-  - scope:
-      path: ""
-      type: "categories"
-    values:
-      layout: "category"
-  - scope:
-      path: ""
-      type: "guides"
-    values:
-      layout: "guide"
