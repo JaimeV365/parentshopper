@@ -43,11 +43,11 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
-    {% if page.layout == 'category' %}
+    {% if page.url contains '/categories/' %}
     <link rel="stylesheet" href="{{ '/css/category.css' | relative_url }}">
-    {% elsif page.layout == 'review' %}
+    {% elsif page.url contains '/reviews/' %}
     <link rel="stylesheet" href="{{ '/css/review.css' | relative_url }}">
-    {% elsif page.layout == 'guide' %}
+    {% elsif page.url contains '/guides/' %}
     <link rel="stylesheet" href="{{ '/css/guide.css' | relative_url }}">
     {% endif %}
     
