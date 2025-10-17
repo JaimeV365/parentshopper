@@ -745,10 +745,10 @@ img[alt*="ParentShopper"] {
   }
 }
 
-/* Skip Navigation Link */
-.skip-link {
+/* Skip Navigation Link - High specificity to override default link styles */
+a.skip-link {
   position: absolute;
-  top: -40px;
+  top: -9999px;
   left: 6px;
   background: var(--color-accent);
   color: white;
@@ -757,10 +757,20 @@ img[alt*="ParentShopper"] {
   border-radius: 4px;
   z-index: 1000;
   font-weight: 600;
+  opacity: 0;
+  visibility: hidden;
+  /* Override default link transition */
+  transition: none;
+  /* Ensure no inherited display issues */
+  display: inline-block;
 }
 
-.skip-link:focus {
+a.skip-link:focus {
   top: 6px;
+  opacity: 1;
+  visibility: visible;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 
 /* Screen Reader Only Text */

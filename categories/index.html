@@ -1,153 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Categories - ParentShopper</title>
-    <meta name="description" content="Browse all our product categories: pushchairs, car seats, feeding, sleep, and safety products. Find the best baby products for your family.">
-    <meta property="og:title" content="Product Categories - ParentShopper">
-    <meta property="og:description" content="Browse all our product categories: pushchairs, car seats, feeding, sleep, and safety products.">
-    <meta property="og:type" content="website">
-    <link rel="icon" type="image/x-icon" href="../images/brand/ParentShopper Logo.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="../images/brand/ParentShopper Logo.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css?v=20250115">
-    <link rel="stylesheet" href="../css/category.css">
-    
-    <style>
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .category-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            border: 1px solid #E5E7EB;
-        }
-        
-        .category-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-        }
-        
-        .category-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #DC8B07, #F59E0B);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .category-content h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #1F2937;
-        }
-        
-        .category-content p {
-            color: #6B7280;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-        
-        .category-stats {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-            font-size: 0.875rem;
-            color: #6B7280;
-        }
-        
-        .category-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #DC8B07;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        
-        .category-link:hover {
-            color: #B45309;
-        }
-        
-        .category-link::after {
-            content: "→";
-            transition: transform 0.2s ease;
-        }
-        
-        .category-link:hover::after {
-            transform: translateX(2px);
-        }
-        
-        .page-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .page-header h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #1F2937;
-            margin-bottom: 1rem;
-        }
-        
-        .page-subtitle {
-            font-size: 1.125rem;
-            color: #6B7280;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-    </style>
-</head>
-<body>
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="../index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; font-weight: 500;">
-                        <img src="../images/brand/ParentShopper logo.png" alt="ParentShopper Logo" class="logo-image" width="83" height="84" loading="eager">
-                        <span class="logo-text-brand">ParentShopper</span>
-                    </a>
-                </div>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link active">Find Products</a></li>
-                        <li><a href="../reviews/" class="nav-link">Reviews</a></li>
-                        <li><a href="../index.html#quick-picks" class="nav-link">Quick Picks</a></li>
-                        <li><a href="../about.html" class="nav-link">About</a></li>
-                    </ul>
-                </nav>
-                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
+---
+layout: default
+title: "Product Categories - ParentShopper"
+description: "Browse all our product categories: pushchairs, car seats, feeding, sleep, and safety products. Find the best baby products for your family."
+---
 
-    <!-- Main Content -->
-    <main class="main-content">
+<!-- Skip to main content link for accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Main Content -->
+<main class="main-content">
         <div class="container">
             <!-- Page Header -->
             <div class="page-header">
@@ -157,108 +18,141 @@
 
             <!-- Categories Grid -->
             <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-icon">🛒</div>
+                <a href="pushchairs.html" class="category-card">
+                    <div class="category-icon" style="display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #F8FAFC; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🛒</div>
+                    </div>
                     <div class="category-content">
                         <h2>Pushchairs & Strollers</h2>
                         <p>Find the perfect pushchair for your lifestyle. From compact travel strollers to all-terrain options.</p>
-                        <div class="category-stats">
-                            <span>7 products reviewed</span>
-                            <span>★★★★★</span>
+                        <div class="category-bottom">
+                            <div class="category-stats">
+                                <span>7 products reviewed</span>
+                                <span class="success-rating">★★★★★</span>
+                            </div>
+                            <div class="category-link">Browse Pushchairs →</div>
                         </div>
-                        <a href="pushchairs.html" class="category-link">Browse Pushchairs</a>
                     </div>
-                </div>
+                </a>
 
-                <div class="category-card">
-                    <div class="category-icon">🚗</div>
+                <a href="car-seats.html" class="category-card">
+                    <div class="category-icon" style="display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #F8FAFC; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🚗</div>
+                    </div>
                     <div class="category-content">
                         <h2>Car Seats</h2>
                         <p>Keep your little one safe on the road. ISOFIX, convertible, and travel car seats reviewed.</p>
-                        <div class="category-stats">
-                            <span>5 products reviewed</span>
-                            <span>★★★★☆</span>
+                        <div class="category-bottom">
+                            <div class="category-stats">
+                                <span>5 products reviewed</span>
+                                <span class="success-rating">★★★★☆</span>
+                            </div>
+                            <div class="category-link">Browse Car Seats →</div>
                         </div>
-                        <a href="car-seats.html" class="category-link">Browse Car Seats</a>
                     </div>
-                </div>
+                </a>
 
-                <div class="category-card">
-                    <div class="category-icon">🍼</div>
+                <a href="feeding.html" class="category-card">
+                    <div class="category-icon" style="display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #F8FAFC; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🍼</div>
+                    </div>
                     <div class="category-content">
                         <h2>Feeding</h2>
                         <p>Bottles, high chairs, and feeding accessories. Make mealtimes easier for you and your baby.</p>
-                        <div class="category-stats">
-                            <span>3 products reviewed</span>
-                            <span>★★★★★</span>
+                        <div class="category-bottom">
+                            <div class="category-stats">
+                                <span>3 products reviewed</span>
+                                <span class="success-rating">★★★★★</span>
+                            </div>
+                            <div class="category-link">Browse Feeding →</div>
                         </div>
-                        <a href="feeding.html" class="category-link">Browse Feeding</a>
                     </div>
-                </div>
+                </a>
 
-                <div class="category-card">
-                    <div class="category-icon">😴</div>
+                <a href="sleep.html" class="category-card">
+                    <div class="category-icon" style="display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #F8FAFC; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 20px;">😴</div>
+                    </div>
                     <div class="category-content">
                         <h2>Sleep</h2>
                         <p>Cots, mattresses, and sleep aids. Help your baby get the rest they need for healthy development.</p>
-                        <div class="category-stats">
-                            <span>4 products reviewed</span>
-                            <span>★★★★☆</span>
+                        <div class="category-bottom">
+                            <div class="category-stats">
+                                <span>4 products reviewed</span>
+                                <span class="success-rating">★★★★☆</span>
+                            </div>
+                            <div class="category-link">Browse Sleep →</div>
                         </div>
-                        <a href="sleep.html" class="category-link">Browse Sleep</a>
                     </div>
-                </div>
+                </a>
 
-                <div class="category-card">
-                    <div class="category-icon">🛡️</div>
+                <a href="safety.html" class="category-card">
+                    <div class="category-icon" style="display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #F8FAFC; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🛡️</div>
+                    </div>
                     <div class="category-content">
                         <h2>Safety</h2>
-                        <p>Baby gates, monitors, and safety essentials. Keep your little explorer safe as they discover the world.</p>
-                        <div class="category-stats">
-                            <span>6 products reviewed</span>
-                            <span>★★★★★</span>
+                        <p>Car seats, pushchairs, and safety essentials. Keep your little explorer safe as they discover the world.</p>
+                        <div class="category-bottom">
+                            <div class="category-stats">
+                                <span>5 products reviewed</span>
+                                <span class="success-rating">★★★★★</span>
+                            </div>
+                            <div class="category-link">Browse Safety →</div>
                         </div>
-                        <a href="safety.html" class="category-link">Browse Safety</a>
                     </div>
-                </div>
+                </a>
+
+                <a href="home-nursery.html" class="category-card">
+                    <div class="category-icon" style="display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #F8FAFC; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🏠</div>
+                    </div>
+                    <div class="category-content">
+                        <h2>Home & Nursery</h2>
+                        <p>Baby bouncers, bottle prep machines, nappy bins, and baby monitors. Essential products for your home setup.</p>
+                        <div class="category-bottom">
+                            <div class="category-stats">
+                                <span>4 products reviewed</span>
+                                <span class="success-rating">★★★★★</span>
+                            </div>
+                            <div class="category-link">Browse Home & Nursery →</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="travel.html" class="category-card">
+                    <div class="category-icon" style="display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #F8FAFC; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 20px;">✈️</div>
+                    </div>
+                    <div class="category-content">
+                        <h2>Travel & On-the-Go</h2>
+                        <p>Travel cots, car seats, foldable pushchairs, and portable monitors. Portable solutions for families on the move.</p>
+                        <div class="category-bottom">
+                            <div class="category-stats">
+                                <span>4 products reviewed</span>
+                                <span class="success-rating">★★★★★</span>
+                            </div>
+                            <div class="category-link">Browse Travel →</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="gifts.html" class="category-card">
+                    <div class="category-icon" style="display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #F8FAFC; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🎁</div>
+                    </div>
+                    <div class="category-content">
+                        <h2>Perfect Gifts</h2>
+                        <p>Baby monitors, bouncers, bottle prep machines, and premium pushchairs. Perfect presents that parents will actually use.</p>
+                        <div class="category-bottom">
+                            <div class="category-stats">
+                                <span>4 products reviewed</span>
+                                <span class="success-rating">★★★★★</span>
+                            </div>
+                            <div class="category-link">Browse Gifts →</div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>ParentShopper</h3>
-                    <p>Real parent reviews for real families. No marketing fluff, just honest recommendations.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="../reviews/">Latest Reviews</a></li>
-                        <li><a href="../index.html#quick-picks">Quick Picks</a></li>
-                        <li><a href="../about.html">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Categories</h4>
-                    <ul>
-                        <li><a href="pushchairs.html">Pushchairs</a></li>
-                        <li><a href="car-seats.html">Car Seats</a></li>
-                        <li><a href="feeding.html">Feeding</a></li>
-                        <li><a href="sleep.html">Sleep</a></li>
-                        <li><a href="safety.html">Safety</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ParentShopper. All rights reserved.</p>
-                <p class="affiliate-notice">As an Amazon Associate, we earn from qualifying purchases, which helps us continue researching products. Your price stays the same.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../js/main.js"></script>
-</body>
-</html>
+</main>
