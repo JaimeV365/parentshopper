@@ -215,47 +215,6 @@
   text-align: center;
 }
 
-/* Clickable card styles */
-.top-pick-card.clickable-card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  position: relative;
-}
-
-.top-pick-card.clickable-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Overlay button for clickable cards */
-.top-pick-card.clickable-card .product-actions {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  z-index: 10;
-  margin: 0;
-  padding: 0;
-}
-
-.top-pick-card.clickable-card .product-actions .btn {
-  position: relative;
-  z-index: 11;
-  font-size: 0.75rem;
-  padding: 0.4rem 0.8rem;
-  min-width: auto;
-  margin: 0;
-  display: inline-block;
-}
-
-/* Hide the "Full Review" button in clickable cards since whole card is clickable */
-.top-pick-card.clickable-card .product-actions .btn-outline {
-  display: none;
-}
-
 .pick-badge {
   position: static;
   display: inline-block;
