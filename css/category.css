@@ -221,6 +221,7 @@
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
 }
 
 .top-pick-card.clickable-card:hover {
@@ -233,20 +234,21 @@
 /* Overlay button for clickable cards */
 .top-pick-card.clickable-card .product-actions {
   position: absolute;
-  top: 10px;
+  bottom: 10px;
   right: 10px;
   z-index: 10;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  margin: 0;
+  padding: 0;
 }
 
 .top-pick-card.clickable-card .product-actions .btn {
   position: relative;
   z-index: 11;
   font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.4rem 0.8rem;
   min-width: auto;
+  margin: 0;
+  display: inline-block;
 }
 
 /* Hide the "Full Review" button in clickable cards since whole card is clickable */
