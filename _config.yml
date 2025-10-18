@@ -9,14 +9,10 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 
-# Jekyll version
-version: "4.3.2"
 
 # GitHub Pages settings
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
 
 # Exclude files from processing
 exclude:
