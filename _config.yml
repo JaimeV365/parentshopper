@@ -19,11 +19,22 @@ exclude:
 # Include files
 include:
   - _includes
+  - _layouts
 
 # Defaults
 defaults:
   - scope:
       path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "categories"
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "reviews"
       type: "pages"
     values:
       layout: "default"
