@@ -9,6 +9,9 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 
+# Jekyll version
+version: "4.3.2"
+
 # Exclude files from processing
 exclude:
   - README.md
@@ -25,16 +28,6 @@ include:
 defaults:
   - scope:
       path: ""
-      type: "pages"
-    values:
-      layout: "default"
-  - scope:
-      path: "categories"
-      type: "pages"
-    values:
-      layout: "default"
-  - scope:
-      path: "reviews"
       type: "pages"
     values:
       layout: "default"
