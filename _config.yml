@@ -7,7 +7,6 @@ url: "https://parentshopper.com"
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: pretty
 
 
 # GitHub Pages settings
