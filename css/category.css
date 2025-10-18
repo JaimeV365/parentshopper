@@ -215,6 +215,32 @@
   text-align: center;
 }
 
+/* Clickable card styles */
+.top-pick-card.clickable-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top-pick-card.clickable-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensure buttons inside clickable cards work properly */
+.top-pick-card.clickable-card .product-actions {
+  position: relative;
+  z-index: 1;
+}
+
+.top-pick-card.clickable-card .product-actions .btn {
+  position: relative;
+  z-index: 2;
+}
+
 .pick-badge {
   position: static;
   display: inline-block;
