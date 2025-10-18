@@ -230,15 +230,28 @@
   color: inherit;
 }
 
-/* Ensure buttons inside clickable cards work properly */
+/* Overlay button for clickable cards */
 .top-pick-card.clickable-card .product-actions {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .top-pick-card.clickable-card .product-actions .btn {
   position: relative;
-  z-index: 2;
+  z-index: 11;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  min-width: auto;
+}
+
+/* Hide the "Full Review" button in clickable cards since whole card is clickable */
+.top-pick-card.clickable-card .product-actions .btn-outline {
+  display: none;
 }
 
 .pick-badge {
