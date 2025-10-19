@@ -59,18 +59,20 @@ description: "Learn about ParentShopper's mission to help busy parents make smar
             <div class="privacy-grid">
                 <div class="privacy-item">
                     <div class="privacy-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie-icon lucide-cookie">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Cookie base -->
                             <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
                             <path d="M8.5 8.5v.01"/>
                             <path d="M16 15.5v.01"/>
                             <path d="M12 12v.01"/>
                             <path d="M11 17v.01"/>
                             <path d="M7 14v.01"/>
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-x-icon lucide-circle-x" style="position: absolute; top: 2px; right: 2px; background: #DC8B07; border-radius: 50%; color: white;">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="m15 9-6 6"/>
-                            <path d="m9 9 6 6"/>
+                            <!-- Small X overlay in bottom-right corner -->
+                            <g transform="translate(10.5, 10.5) scale(0.6)">
+                                <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor"/>
+                                <path d="m15 9-6 6"/>
+                                <path d="m9 9 6 6"/>
+                            </g>
                         </svg>
                     </div>
                     <h3>No Cookies</h3>
@@ -79,14 +81,37 @@ description: "Learn about ParentShopper's mission to help busy parents make smar
                 
                 <div class="privacy-item">
                     <div class="privacy-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin">
-                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
-                            <circle cx="12" cy="10" r="3"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Cloud base - moved up more -->
+                            <g transform="translate(0, -3)">
+                                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+                            </g>
+                            <!-- Small X overlay in bottom-right corner -->
+                            <g transform="translate(10.5, 10.5) scale(0.6)">
+                                <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor"/>
+                                <path d="m15 9-6 6"/>
+                                <path d="m9 9 6 6"/>
+                            </g>
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-x-icon lucide-circle-x" style="position: absolute; top: 2px; right: 2px; background: #DC8B07; border-radius: 50%; color: white;">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="m15 9-6 6"/>
-                            <path d="m9 9 6 6"/>
+                    </div>
+                    <h3>No Cloud Storage</h3>
+                    <p>Your data never leaves your computer. All processing happens locally in your browser.</p>
+                </div>
+                
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Map pin base - moved left -->
+                            <g transform="translate(-3, 0)">
+                                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </g>
+                            <!-- Small X overlay in bottom-right corner -->
+                            <g transform="translate(10, 10) scale(0.6)">
+                                <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor"/>
+                                <path d="m15 9-6 6"/>
+                                <path d="m9 9 6 6"/>
+                            </g>
                         </svg>
                     </div>
                     <h3>No Tracking</h3>
@@ -95,33 +120,21 @@ description: "Learn about ParentShopper's mission to help busy parents make smar
                 
                 <div class="privacy-item">
                     <div class="privacy-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock-keyhole-icon lucide-lock-keyhole">
-                            <circle cx="12" cy="16" r="1"/>
-                            <rect x="3" y="10" width="18" height="12" rx="2"/>
-                            <path d="M7 10V7a5 5 0 0 1 10 0v3"/>
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-icon lucide-circle-check" style="position: absolute; top: 2px; right: 2px; background: #DC8B07; border-radius: 50%; color: white;">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="m9 12 2 2 4-4"/>
-                        </svg>
-                    </div>
-                    <h3>Secure</h3>
-                    <p>Our site uses HTTPS encryption to protect your connection and ensure secure browsing.</p>
-                </div>
-                
-                <div class="privacy-item">
-                    <div class="privacy-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-icon lucide-book-open">
-                            <path d="M12 7v14"/>
-                            <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-icon lucide-circle-check" style="position: absolute; top: 2px; right: 2px; background: #DC8B07; border-radius: 50%; color: white;">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="m9 12 2 2 4-4"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- House base - moved left -->
+                            <g transform="translate(-2, 0)">
+                                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                                <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            </g>
+                            <!-- Small checkmark overlay in bottom-right corner -->
+                            <g transform="translate(10, 10) scale(0.6)">
+                                <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </g>
                         </svg>
                     </div>
-                    <h3>Transparent</h3>
-                    <p>We're upfront about our affiliate relationships and only recommend products we genuinely believe in.</p>
+                    <h3>100% Local Processing</h3>
+                    <p>All analysis happens in your browser. No data is sent anywhere—in fact, ParentShopper works offline because there's no data transfer required.</p>
                 </div>
             </div>
         </section>
