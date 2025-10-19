@@ -755,3 +755,79 @@ p.text-full-width {
     color: #6B7280;
     font-size: 0.9rem;
 }
+
+/* ============================================
+   ADDITIONAL PURCHASE SECTIONS (Car Seat Bases)
+   ============================================ */
+.additional-purchase {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #F8FAFC;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+}
+
+.additional-purchase h4 {
+    margin: 0 0 1rem 0;
+    color: #374151;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.base-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.base-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: white;
+    border: 1px solid #E5E7EB;
+}
+
+.base-details h5 {
+    margin: 0 0 0.5rem 0;
+    color: #374151;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.base-details p {
+    margin: 0 0 0.75rem 0;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.btn-secondary {
+    background: #6B7280;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: #4B5563;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .base-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .base-image {
+        width: 100px;
+        height: 100px;
+    }
+}
