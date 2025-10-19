@@ -13,6 +13,81 @@
     max-width: none !important;
 }
 
+/* Full-width paragraphs */
+p.text-full-width {
+    max-width: none;
+}
+
+/* Quick answer card links */
+.quick-answer-card h3 a {
+    color: #059669;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* Check price buttons in quick answer cards */
+.quick-answer-card .check-price-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: #DC8B07;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.quick-answer-card .check-price-btn:hover {
+    background: #B87506;
+    color: white;
+}
+
+/* Product images in reviews */
+.product-review-image {
+    width: 100%;
+    max-height: 400px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Availability notice */
+.availability-notice {
+    background-color: #FEF3C7;
+    border: 1px solid #F59E0B;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 16px 0;
+    font-size: 0.9rem;
+}
+
+.availability-notice a {
+    font-weight: 500;
+}
+
+/* Final message box */
+.final-message {
+    background: #F8FAFC;
+    border: 2px solid #E5E7EB;
+    border-left: 4px solid #F59E0B;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.final-message p {
+    margin: 0 0 1rem 0;
+    color: #4B5563;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.final-message p:last-child {
+    margin: 0;
+}
+
 /* Quick answer subtitle styling */
 .quick-answer-subtitle {
     max-width: none;
