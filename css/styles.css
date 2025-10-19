@@ -115,14 +115,6 @@ a:hover {
   padding: var(--spacing-sm) 0;
 }
 
-.logo-placeholder {
-  display: flex;
-  align-items: center;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: var(--color-primary);
-}
 
 /* Logo Container */
 .logo {
