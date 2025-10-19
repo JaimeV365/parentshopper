@@ -874,6 +874,32 @@ a:focus {
   line-height: 1.6;
 }
 
+/* Approach grid for about page */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+}
+
+.approach-item {
+  background: var(--color-background-subtle);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+.approach-item h3 {
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.25rem;
+}
+
+.approach-item p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
 /* Research Steps */
 .research-steps {
   display: grid;
