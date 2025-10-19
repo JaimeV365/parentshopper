@@ -979,14 +979,14 @@ a:focus {
   align-items: center;
   width: 48px;
   height: 48px;
-  background: var(--color-accent);
+  background: #DC8B07;
   border-radius: 50%;
   margin: 0 auto var(--spacing-md);
   color: white;
 }
 
 .privacy-item h3 {
-  color: var(--color-accent);
+  color: #DC8B07;
   margin-bottom: var(--spacing-sm);
   font-size: 1.25rem;
 }

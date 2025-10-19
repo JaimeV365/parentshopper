@@ -60,7 +60,19 @@ description: "Learn about ParentShopper's mission to help busy parents make smar
                 <div class="privacy-item">
                     <div class="privacy-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <!-- Cookie base -->
+                            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
+                            <path d="M8.5 8.5v.01"/>
+                            <path d="M16 15.5v.01"/>
+                            <path d="M12 12v.01"/>
+                            <path d="M11 17v.01"/>
+                            <path d="M7 14v.01"/>
+                            <!-- Small X overlay in bottom-right corner -->
+                            <g transform="translate(10.5, 10.5) scale(0.6)">
+                                <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor"/>
+                                <path d="m15 9-6 6"/>
+                                <path d="m9 9 6 6"/>
+                            </g>
                         </svg>
                     </div>
                     <h3>No Cookies</h3>
@@ -70,11 +82,36 @@ description: "Learn about ParentShopper's mission to help busy parents make smar
                 <div class="privacy-item">
                     <div class="privacy-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 12l2 2 4-4"/>
-                            <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
-                            <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
-                            <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/>
-                            <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/>
+                            <!-- Cloud base - moved up more -->
+                            <g transform="translate(0, -3)">
+                                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+                            </g>
+                            <!-- Small X overlay in bottom-right corner -->
+                            <g transform="translate(10.5, 10.5) scale(0.6)">
+                                <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor"/>
+                                <path d="m15 9-6 6"/>
+                                <path d="m9 9 6 6"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3>No Cloud Storage</h3>
+                    <p>Your data never leaves your computer. All processing happens locally in your browser.</p>
+                </div>
+                
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Map pin base - moved left -->
+                            <g transform="translate(-3, 0)">
+                                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </g>
+                            <!-- Small X overlay in bottom-right corner -->
+                            <g transform="translate(10, 10) scale(0.6)">
+                                <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor"/>
+                                <path d="m15 9-6 6"/>
+                                <path d="m9 9 6 6"/>
+                            </g>
                         </svg>
                     </div>
                     <h3>No Tracking</h3>
@@ -84,27 +121,20 @@ description: "Learn about ParentShopper's mission to help busy parents make smar
                 <div class="privacy-item">
                     <div class="privacy-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                            <circle cx="12" cy="16" r="1"/>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            <!-- House base - moved left -->
+                            <g transform="translate(-2, 0)">
+                                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                                <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            </g>
+                            <!-- Small checkmark overlay in bottom-right corner -->
+                            <g transform="translate(10, 10) scale(0.6)">
+                                <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </g>
                         </svg>
                     </div>
-                    <h3>Secure Browsing</h3>
-                    <p>Our site uses HTTPS encryption to protect your connection and ensure secure browsing.</p>
-                </div>
-                
-                <div class="privacy-item">
-                    <div class="privacy-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14,2 14,8 20,8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/>
-                            <line x1="16" y1="17" x2="8" y2="17"/>
-                            <polyline points="10,9 9,9 8,9"/>
-                        </svg>
-                    </div>
-                    <h3>Transparent</h3>
-                    <p>We're upfront about our affiliate relationships and only recommend products we genuinely believe in.</p>
+                    <h3>100% Local Processing</h3>
+                    <p>All analysis happens in your browser. No data is sent anywhere—in fact, ParentShopper works offline because there's no data transfer required.</p>
                 </div>
             </div>
         </section>
