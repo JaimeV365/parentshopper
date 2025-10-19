@@ -1,17 +1,28 @@
 // ParentShopper JavaScript - Minimal, Performance-Focused
 
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing mobile menu...');
+    
     // Mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.nav');
     
     console.log('Mobile menu elements found:', {
         toggle: !!mobileMenuToggle,
-        nav: !!nav
+        nav: !!nav,
+        toggleElement: mobileMenuToggle,
+        navElement: nav
     });
     
     if (mobileMenuToggle && nav) {
-        mobileMenuToggle.addEventListener('click', function() {
+        // Ensure mobile menu toggle is visible on mobile
+        if (window.innerWidth <= 767) {
+            mobileMenuToggle.style.display = 'flex';
+        }
+        
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             console.log('Mobile menu clicked');
             nav.classList.toggle('mobile-menu-open');
             mobileMenuToggle.classList.toggle('active');
@@ -19,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 navClasses: nav.className,
                 toggleClasses: mobileMenuToggle.className
             });
+        });
+        
+        // Add touch event for better mobile support
+        mobileMenuToggle.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            this.click();
         });
     } else {
         console.error('Mobile menu elements not found:', {

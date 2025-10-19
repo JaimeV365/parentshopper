@@ -201,6 +201,8 @@ img[alt*="ParentShopper"] {
   border: none;
   cursor: pointer;
   padding: var(--spacing-xs);
+  z-index: 1001;
+  position: relative;
 }
 
 .mobile-menu-toggle span {
@@ -208,6 +210,12 @@ img[alt*="ParentShopper"] {
   height: 2px;
   background-color: var(--color-primary);
   transition: all 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  .mobile-menu-toggle {
+    display: flex !important;
+  }
 }
 
 @media (min-width: 768px) {
