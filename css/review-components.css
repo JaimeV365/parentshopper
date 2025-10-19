@@ -804,7 +804,7 @@ p.text-full-width {
 }
 
 .btn-secondary {
-    background: #6B7280;
+    background: #DC8B07;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -816,7 +816,7 @@ p.text-full-width {
 }
 
 .btn-secondary:hover {
-    background: #4B5563;
+    background: #B87506;
     color: white;
 }
 
