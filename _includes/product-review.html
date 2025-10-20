@@ -15,12 +15,14 @@
             <div class="product-price">{{ include.product_price }}</div>
             <p class="product-verdict">{{ include.product_verdict }}</p>
             
+            {% if include.show_availability %}
             <div class="availability-notice" style="background-color: #FEF3C7; border: 1px solid #F59E0B; border-radius: 8px; padding: 12px; margin: 16px 0; font-size: 0.9rem;">
                 <strong>Current UK Availability:</strong><br>
                 {{ include.product_name }} is available on Amazon:<br>
                 • <a href="{{ include.product_link }}" target="_blank" rel="nofollow noopener" style="font-weight: 500;">Amazon UK - {{ include.product_name }}</a><br><br>
                 <em>Note: We earn a small commission from Amazon links, which helps us continue researching products. Your price stays the same.</em>
             </div>
+            {% endif %}
             <p class="product-verdict">{{ include.product_verdict_2 }}</p>
             <a href="{{ include.product_link }}" class="btn btn-primary">View on Amazon</a>
         </div>
