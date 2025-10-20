@@ -1,0 +1,221 @@
+<!-- Standardized Review Template -->
+---
+layout: review
+---
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <div class="container">
+        <a href="{{ '/' | relative_url }}">Home</a> > 
+        <a href="{{ '/reviews/' | relative_url }}">Reviews</a> > 
+        <span aria-current="page">{{ page.title }}</span>
+    </div>
+</nav>
+
+<!-- Article Header -->
+<article class="review-article" id="main-content">
+    <header class="article-header">
+        <div class="container">
+            <div class="article-meta">
+                <span>{{ page.category | default: "Product" }} Review</span>
+                <span class="article-date">Published: {{ page.date | date: "%B %Y" }}</span>
+                <span class="article-date">{{ page.read_time | default: "12" }} min read</span>
+            </div>
+            <h1>{{ page.title }}</h1>
+            
+            <div class="article-intro">
+                {% for intro in page.intro %}
+                <p>{{ intro }}</p>
+                {% endfor %}
+            </div>
+            
+            <!-- Quick Answer Section -->
+            {% include review-components.html 
+                subtitle=page.quick_answer.subtitle
+                product1_name=page.quick_answer.product1.name
+                product1_price=page.quick_answer.product1.price
+                product1_description=page.quick_answer.product1.description
+                product1_link=page.quick_answer.product1.link
+                product1_benefit1=page.quick_answer.product1.benefit1
+                product1_benefit2=page.quick_answer.product1.benefit2
+                product1_benefit3=page.quick_answer.product1.benefit3
+                product2_name=page.quick_answer.product2.name
+                product2_price=page.quick_answer.product2.price
+                product2_description=page.quick_answer.product2.description
+                product2_link=page.quick_answer.product2.link
+                product2_benefit1=page.quick_answer.product2.benefit1
+                product2_benefit2=page.quick_answer.product2.benefit2
+                product2_benefit3=page.quick_answer.product2.benefit3
+                product3_name=page.quick_answer.product3.name
+                product3_price=page.quick_answer.product3.price
+                product3_description=page.quick_answer.product3.description
+                product3_link=page.quick_answer.product3.link
+                product3_benefit1=page.quick_answer.product3.benefit1
+                product3_benefit2=page.quick_answer.product3.benefit2
+                product3_benefit3=page.quick_answer.product3.benefit3
+                summary=page.quick_answer.summary
+            %}
+        </div>
+    </header>
+
+    <!-- Our Story Section -->
+    <section class="problem-section" id="our-story">
+        <div class="container">
+            <div class="our-story">
+                <h2>{{ page.our_story.title }}</h2>
+                {% for paragraph in page.our_story.content %}
+                <p>{{ paragraph }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Recommendations -->
+    <section class="recommendations" id="top-picks">
+        <div class="container">
+            <h2>{{ page.recommendations.title }}</h2>
+            
+            {% for product in page.products %}
+            {% include product-review.html 
+                product_number=product.number
+                product_name=product.name
+                product_subtitle=product.subtitle
+                product_image=product.image
+                product_alt=product.alt
+                product_rating=product.rating
+                product_price=product.price
+                product_verdict=product.verdict
+                product_verdict_2=product.verdict_2
+                product_link=product.link
+                product_specs=product.specs
+                product_why_love=product.why_love
+                product_why_love_2=product.why_love_2
+                product_pros=product.pros
+                product_cons=product.cons
+            %}
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-table" id="comparison">
+        <div class="container">
+            <h2>{{ page.comparison.title }}</h2>
+            <div class="table-container" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+                <table class="comparison-table-content" style="min-width: 600px;">
+                    <thead>
+                        <tr>
+                            {% for header in page.comparison.headers %}
+                            <th>{{ header }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in page.comparison.rows %}
+                        <tr {% if row.highlight %}style="background-color: #FEF3C7;"{% endif %}>
+                            {% for cell in row.cells %}
+                            <td>{{ cell }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Learned Section -->
+    <section class="problem-section" id="what-we-learned">
+        <div class="container">
+            <h2>{{ page.learnings.title }}</h2>
+            
+            <div class="learnings-grid">
+                {% for learning in page.learnings.items %}
+                <div class="learning-item">
+                    <h3>{{ learning.title }}</h3>
+                    <p>{{ learning.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            {% for faq in page.faqs %}
+            <div class="faq-item">
+                <h3>{{ faq.question }}</h3>
+                {% for answer in faq.answers %}
+                <p style="max-width: none;">{{ answer }}</p>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Final Recommendation -->
+    <section class="problem-section">
+        <div class="container">
+            <h2>{{ page.final_recommendation.title }}</h2>
+            
+            <div class="verdict-grid">
+                {% for verdict in page.final_recommendation.verdicts %}
+                <div class="verdict-box">
+                    <h3>{{ verdict.title }}</h3>
+                    <p>{{ verdict.content }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="final-message" style="background: #F8FAFC; border: 2px solid #E5E7EB; border-left: 4px solid #F59E0B; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                {% for message in page.final_recommendation.messages %}
+                <p style="margin: 0 0 1rem 0; color: #4B5563; line-height: 1.6; font-size: 1.05rem;">{{ message }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Related Articles</h2>
+            <div class="related-articles-grid">
+                {% for related in page.related_articles %}
+                <div class="related-article-card">
+                    <a href="{{ related.url | relative_url }}">
+                        <img src="{{ related.image }}" 
+                             alt="{{ related.alt }}" 
+                             class="related-article-image"
+                             loading="lazy">
+                    </a>
+                    <div class="related-article-content">
+                        <a href="{{ related.url | relative_url }}">
+                            <h3>{{ related.title }}</h3>
+                        </a>
+                        <p>{{ related.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Disclosure -->
+    <div class="container">
+        <div style="background: #F1F5F9; padding: 1.5rem; border-left: 4px solid #DC2626; margin: 2rem 0; border-radius: 8px;">
+            <h3 style="color: #1f2937; font-size: 1.1rem; margin-bottom: 0.75rem; font-weight: 600;">⚠️ Important Disclaimer</h3>
+            <p style="color: #4B5563; font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.75rem; max-width: none;">
+                <strong>This article shares our personal experiences and opinions as parents in the UK.</strong> We are not medical professionals, safety experts, or childcare specialists.
+            </p>
+            <p style="color: #4B5563; font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.75rem; max-width: none;">
+                Always follow manufacturer guidelines and current UK safety standards. Safety recommendations change regularly—verify current advice with the NHS, Lullaby Trust, or your health visitor before making decisions about your baby's care.
+            </p>
+            <p style="color: #4B5563; font-size: 0.9rem; line-height: 1.6; margin-bottom: 0; max-width: none;">
+                <strong>Affiliate Disclosure:</strong> We earn commission from qualifying purchases through Amazon affiliate links in this article. This helps support our family and keeps our content free, but never influences our honest opinions.
+            </p>
+        </div>
+    </div>
+</article>

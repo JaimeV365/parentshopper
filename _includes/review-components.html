@@ -1,0 +1,63 @@
+<!-- Standardized Review Components -->
+
+<!-- Quick Answer Section -->
+<div class="quick-answer-modern">
+    <div class="quick-answer-header">
+        <h2>Quick Answer</h2>
+        <p class="quick-answer-subtitle">{{ include.subtitle | default: "Stop buying the wrong product for your lifestyle" }}</p>
+    </div>
+    
+    <div class="quick-answer-grid">
+        <!-- Our Pick -->
+        <div class="quick-answer-card primary-pick">
+            <div class="card-header">
+                <div class="pick-badge">🏆 Our Pick</div>
+            </div>
+            <h3><a href="#product-1" style="color: #059669; font-weight: 500; text-decoration: underline;">{{ include.product1_name }} - Read Review</a></h3>
+            <div class="price-tag">{{ include.product1_price }}</div>
+            <p class="card-description">{{ include.product1_description }}</p>
+            <a href="{{ include.product1_link }}" style="display: inline-block; margin-top: 0.5rem; margin-bottom: 1rem; padding: 0.5rem 1rem; background: #DC8B07; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem;" target="_blank" rel="nofollow noopener">Check Price</a>
+            <div class="key-benefits">
+                <span class="benefit-tag">✅ {{ include.product1_benefit1 }}</span>
+                <span class="benefit-tag">✅ {{ include.product1_benefit2 }}</span>
+                <span class="benefit-tag">✅ {{ include.product1_benefit3 }}</span>
+            </div>
+        </div>
+
+        <!-- Runner-up -->
+        <div class="quick-answer-card runner-up">
+            <div class="card-header">
+                <div class="pick-badge">🥈 Runner-up</div>
+            </div>
+            <h3><a href="#product-2" style="color: #059669; font-weight: 500; text-decoration: underline;">{{ include.product2_name }} - Read Review</a></h3>
+            <div class="price-tag">{{ include.product2_price }}</div>
+            <p class="card-description">{{ include.product2_description }}</p>
+            <a href="{{ include.product2_link }}" style="display: inline-block; margin-top: 0.5rem; margin-bottom: 1rem; padding: 0.5rem 1rem; background: #DC8B07; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem;" target="_blank" rel="nofollow noopener">Check Price</a>
+            <div class="key-benefits">
+                <span class="benefit-tag">✅ {{ include.product2_benefit1 }}</span>
+                <span class="benefit-tag">✅ {{ include.product2_benefit2 }}</span>
+                <span class="benefit-tag">✅ {{ include.product2_benefit3 }}</span>
+            </div>
+        </div>
+
+        <!-- Budget Pick -->
+        <div class="quick-answer-card budget-pick">
+            <div class="card-header">
+                <div class="pick-badge">💰 Budget Pick</div>
+            </div>
+            <h3><a href="#product-3" style="color: #059669; font-weight: 500; text-decoration: underline;">{{ include.product3_name }} - Read Review</a></h3>
+            <div class="price-tag">{{ include.product3_price }}</div>
+            <p class="card-description">{{ include.product3_description }}</p>
+            <a href="{{ include.product3_link }}" style="display: inline-block; margin-top: 0.5rem; margin-bottom: 1rem; padding: 0.5rem 1rem; background: #DC8B07; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem;" target="_blank" rel="nofollow noopener">Check Price</a>
+            <div class="key-benefits">
+                <span class="benefit-tag">✅ {{ include.product3_benefit1 }}</span>
+                <span class="benefit-tag">✅ {{ include.product3_benefit2 }}</span>
+                <span class="benefit-tag">✅ {{ include.product3_benefit3 }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-answer-summary">
+        <p style="max-width: none;"><strong>The bottom line:</strong> {{ include.summary }}</p>
+    </div>
+</div>

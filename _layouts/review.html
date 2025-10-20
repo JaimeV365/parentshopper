@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.amazon.co.uk">
+    <link rel="preconnect" href="https://m.media-amazon.com">
+    
+    <!-- DNS prefetch as fallback for older browsers -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//www.amazon.co.uk">
+    <link rel="dns-prefetch" href="//m.media-amazon.com">
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="{{ '/css/styles.css' | relative_url }}" as="style">
+    <link rel="preload" href="{{ '/css/review.css' | relative_url }}" as="style">
+    
+    <!-- Load fonts efficiently -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    {% if page.image %}
+    <meta property="og:image" content="{{ page.image | absolute_url }}">
+    {% endif %}
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    {% if page.image %}
+    <meta name="twitter:image" content="{{ page.image | absolute_url }}">
+    {% endif %}
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ '/images/brand/ParentShopper Logo.ico' | relative_url }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/images/brand/ParentShopper Logo.ico' | relative_url }}">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/review.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/review-components.css' | relative_url }}">
+    
+    <!-- Schema.org structured data -->
+    {% if page.schema %}
+    <script type="application/ld+json">
+    {{ page.schema | jsonify }}
+    </script>
+    {% endif %}
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="{{ '/' | relative_url }}" class="logo-link">
+                        <img src="{{ '/images/brand/ParentShopper logo.png' | relative_url }}" alt="ParentShopper" class="logo-image" width="83" height="84" loading="eager">
+                        <span class="logo-text-brand">ParentShopper</span>
+                    </a>
+                </div>
+                {% include navigation.html %}
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ParentShopper</h3>
+                    <p>Real parent reviews for real parents. No sponsored content, just honest recommendations.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="{{ '/categories/feeding.html' | relative_url }}">Feeding</a></li>
+                        <li><a href="{{ '/categories/sleep.html' | relative_url }}">Sleep</a></li>
+                        <li><a href="{{ '/categories/pushchairs.html' | relative_url }}">Pushchairs</a></li>
+                        <li><a href="{{ '/categories/car-seats.html' | relative_url }}">Car Seats</a></li>
+                        <li><a href="{{ '/categories/safety.html' | relative_url }}">Safety</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Reviews</h4>
+                    <ul>
+                        <li><a href="{{ '/reviews/best-baby-monitor-uk-2025.html' | relative_url }}">Baby Monitors</a></li>
+                        <li><a href="{{ '/reviews/best-pushchairs-uk-2025.html' | relative_url }}">Pushchairs</a></li>
+                        <li><a href="{{ '/reviews/best-car-seats-uk-2025.html' | relative_url }}">Car Seats</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+                        <li><a href="{{ '/affiliate-disclosure.html' | relative_url }}">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ParentShopper. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ '/js/main.js' | relative_url }}"></script>
+</body>
+</html>

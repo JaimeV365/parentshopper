@@ -1,0 +1,56 @@
+<!-- Standardized Product Review Component -->
+<div class="product-review" id="product-{{ include.product_number }}">
+    <div class="product-hero">
+        <div class="product-image-container">
+            <img src="{{ include.product_image }}" 
+                 alt="{{ include.product_alt }}"
+                 loading="lazy"
+                 width="400"
+                 height="400"
+                 style="width: 100%; max-height: 400px; height: auto; object-fit: contain; border-radius: 8px;">
+        </div>
+        <div class="product-details">
+            <h3>{{ include.product_number }}. {{ include.product_name }} — {{ include.product_subtitle }}</h3>
+            <div class="product-rating">{{ include.product_rating }}</div>
+            <div class="product-price">{{ include.product_price }}</div>
+            <p class="product-verdict">{{ include.product_verdict }}</p>
+            
+            <div class="availability-notice" style="background-color: #FEF3C7; border: 1px solid #F59E0B; border-radius: 8px; padding: 12px; margin: 16px 0; font-size: 0.9rem;">
+                <strong>Current UK Availability:</strong><br>
+                {{ include.product_name }} is available on Amazon:<br>
+                • <a href="{{ include.product_link }}" target="_blank" rel="nofollow noopener" style="font-weight: 500;">Amazon UK - {{ include.product_name }}</a><br><br>
+                <em>Note: We earn a small commission from Amazon links, which helps us continue researching products. Your price stays the same.</em>
+            </div>
+            <p class="product-verdict">{{ include.product_verdict_2 }}</p>
+            <a href="{{ include.product_link }}" class="btn btn-primary">View on Amazon</a>
+        </div>
+    </div>
+    
+    <div class="product-analysis">
+        <h4>Key Specs:</h4>
+        <ul>
+            {% for spec in include.product_specs %}
+            <li><strong>{{ spec.name }}:</strong> {{ spec.value }}</li>
+            {% endfor %}
+        </ul>
+        
+        <h4>Why We Love It:</h4>
+        <p style="max-width: none;">{{ include.product_why_love }}</p>
+        
+        <p style="max-width: none;">{{ include.product_why_love_2 }}</p>
+        
+        <h4>Who Should Buy This:</h4>
+        <ul class="pros-list">
+            {% for pro in include.product_pros %}
+            <li>{{ pro }}</li>
+            {% endfor %}
+        </ul>
+        
+        <h4>Who Shouldn't:</h4>
+        <ul class="cons-list">
+            {% for con in include.product_cons %}
+            <li>{{ con }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
