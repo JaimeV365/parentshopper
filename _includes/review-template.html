@@ -230,7 +230,7 @@ layout: review
         <div class="container">
             <h2 class="section-title" style="text-align: center;">Related Articles</h2>
             <div class="related-articles-grid">
-                {% for related in page.related_articles %}
+                {% for related in page.related_articles limit:4 %}
                 <div class="related-article-card">
                     <a href="{{ related.url | relative_url }}">
                         <img src="{{ related.image }}" 
