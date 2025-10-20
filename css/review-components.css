@@ -831,3 +831,70 @@ p.text-full-width {
         height: 80px;
     }
 }
+
+/* ============================================
+   PRODUCT SUBSECTIONS
+   ============================================ */
+.product-subsection {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.subsection-image {
+    flex: 0 0 120px;
+    min-width: 120px;
+}
+
+.subsection-content {
+    flex: 1;
+}
+
+.subsection-content h5 {
+    margin: 0 0 0.5rem 0;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.subsection-content p {
+    margin: 0 0 1rem 0;
+    color: #4B5563;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #6B7280;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: #4B5563;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .product-subsection {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .subsection-image {
+        flex: none;
+        align-self: center;
+        max-width: 150px;
+    }
+}
