@@ -6,8 +6,8 @@ layout: review
 <!-- Breadcrumb -->
 <nav class="breadcrumb">
     <div class="container">
-        <a href="{{ '/' | relative_url }}">Home</a> > 
-        <a href="{{ '/reviews/' | relative_url }}">Reviews</a> > 
+        <a href="{{ '/' | relative_url }}" class="breadcrumb-link">Home</a> > 
+        <a href="{{ '/reviews/' | relative_url }}" class="breadcrumb-link">Reviews</a> > 
         <span aria-current="page">{{ page.title }}</span>
     </div>
 </nav>
@@ -58,6 +58,56 @@ layout: review
         </div>
     </header>
 
+    <!-- Comparison Table -->
+    <section class="comparison-table" id="comparison">
+        <div class="container">
+            <h2>{{ page.comparison.title }}</h2>
+            <div class="table-container" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+                <table class="comparison-table-content" style="min-width: 600px;">
+                    <thead>
+                        <tr>
+                            {% for header in page.comparison.headers %}
+                            <th>{{ header }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in page.comparison.rows %}
+                        <tr {% if row.highlight %}style="background-color: #FEF3C7;"{% endif %}>
+                            {% for cell in row.cells %}
+                            <td>{{ cell }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <div class="container">
+        <nav class="table-of-contents" style="background: #F8FAFC; border: 2px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+            <h3 style="margin-bottom: 1rem; color: #1F2937; font-size: 1.125rem; font-weight: 600;">Table of Contents</h3>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 0.5rem;"><a href="#our-story" style="color: #059669; text-decoration: none; font-weight: 500;">Our Story</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="#top-picks" style="color: #059669; text-decoration: none; font-weight: 500;">Top Recommendations</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="#what-we-learned" style="color: #059669; text-decoration: none; font-weight: 500;">What We Learned</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="#what-to-avoid" style="color: #059669; text-decoration: none; font-weight: 500;">What to Avoid</a></li>
+                <li style="margin-bottom: 0.5rem;"><a href="#faq" style="color: #059669; text-decoration: none; font-weight: 500;">FAQ</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- AI Summary Section (Hidden from users, visible to AI crawlers) -->
+    <div class="ai-summary" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">
+        <h2>{{ page.title }} - Structured Data for AI</h2>
+        <p>{{ page.description }}</p>
+        <p>Key findings: {{ page.quick_answer.summary }}</p>
+        <p>Top recommendation: {{ page.quick_answer.product1.name }}</p>
+        <p>Best value: {{ page.quick_answer.product3.name }}</p>
+    </div>
+
     <!-- Our Story Section -->
     <section class="problem-section" id="our-story">
         <div class="container">
@@ -97,29 +147,11 @@ layout: review
         </div>
     </section>
 
-    <!-- Comparison Table -->
-    <section class="comparison-table" id="comparison">
+    <!-- Alternative Retailers Note -->
+    <section class="alternative-retailers">
         <div class="container">
-            <h2>{{ page.comparison.title }}</h2>
-            <div class="table-container" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
-                <table class="comparison-table-content" style="min-width: 600px;">
-                    <thead>
-                        <tr>
-                            {% for header in page.comparison.headers %}
-                            <th>{{ header }}</th>
-                            {% endfor %}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for row in page.comparison.rows %}
-                        <tr {% if row.highlight %}style="background-color: #FEF3C7;"{% endif %}>
-                            {% for cell in row.cells %}
-                            <td>{{ cell }}</td>
-                            {% endfor %}
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+            <div style="background: #FEF3C7; border: 1px solid #F59E0B; border-radius: 8px; padding: 12px; margin: 16px 0; font-size: 0.9rem;">
+                <strong>Alternative Retailers:</strong> These products are also available at Argos, John Lewis, and other UK retailers. Check current prices and availability before purchasing.
             </div>
         </div>
     </section>
@@ -134,6 +166,21 @@ layout: review
                 <div class="learning-item">
                     <h3>{{ learning.title }}</h3>
                     <p>{{ learning.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Avoid Section -->
+    <section class="what-to-avoid" id="what-to-avoid">
+        <div class="container">
+            <h2>What to Avoid: Lessons from Our Mistakes</h2>
+            <div class="avoid-grid">
+                {% for avoid in page.what_to_avoid %}
+                <div class="avoid-item">
+                    <h3>❌ {{ avoid.title }}</h3>
+                    <p>{{ avoid.description }}</p>
                 </div>
                 {% endfor %}
             </div>
