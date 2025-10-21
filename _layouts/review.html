@@ -85,35 +85,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>ParentShopper</h4>
-                    <p>Your personal shopping guide for parenting. Real recommendations from real parents.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="{{ '/categories/pushchairs.html' | relative_url }}" style="font-weight: 500;">Pushchairs</a></li>
-                        <li><a href="{{ '/categories/car-seats.html' | relative_url }}" style="font-weight: 500;">Car Seats</a></li>
-                        <li><a href="{{ '/categories/feeding.html' | relative_url }}" style="font-weight: 500;">Feeding</a></li>
-                        <li><a href="{{ '/categories/sleep.html' | relative_url }}" style="font-weight: 500;">Sleep</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>About</h4>
-                    <ul>
-                        <li><a href="{{ '/about.html' | relative_url }}" style="font-weight: 500;">About Us</a></li>
-                        <li><a href="{{ '/affiliate-disclosure.html' | relative_url }}" style="font-weight: 500;">Affiliate Disclosure</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ParentShopper. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    {% include footer.html %}
 
     <!-- JavaScript -->
     <script src="{{ '/js/main.js' | relative_url }}"></script>
