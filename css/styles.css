@@ -946,12 +946,18 @@ a:focus {
 /* Privacy section styling */
 .privacy-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--spacing-lg);
   margin: var(--spacing-lg) 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
+  .privacy-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
   .privacy-grid {
     grid-template-columns: repeat(2, 1fr);
   }
