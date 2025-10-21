@@ -189,7 +189,7 @@ const PRODUCT_DATA = {
     'britax-romer-dualfix': {
         name: 'Britax Romer Dualfix M i-Size',
         image: 'https://m.media-amazon.com/images/I/61OoOFnh4sS._AC_SL1500_.jpg',
-        affiliateLink: 'https://www.amazon.co.uk/dp/B07NQLH4RV?tag=parentshopper-21',
+        affiliateLink: 'https://www.amazon.co.uk/dp/B07P55SXK2?&linkCode=ll1&tag=parentshopper-21&linkId=b41e3be6b5b184d869b1ac5966ac3aff&language=en_GB&ref_=as_li_ss_tl',
         reviewLink: '../reviews/best-car-seats-uk-2025.html',
         price: 'Premium choice',
         rating: '★★★★★',
@@ -198,7 +198,7 @@ const PRODUCT_DATA = {
     'joie-i-spin-360': {
         name: 'Joie i-Spin 360',
         image: 'https://m.media-amazon.com/images/I/61OoOFnh4sS._AC_SL1500_.jpg',
-        affiliateLink: 'https://www.amazon.co.uk/dp/B07NQLH4RV?tag=parentshopper-21',
+        affiliateLink: 'https://www.amazon.co.uk/dp/B07P55SXK2?&linkCode=ll1&tag=parentshopper-21&linkId=b41e3be6b5b184d869b1ac5966ac3aff&language=en_GB&ref_=as_li_ss_tl',
         reviewLink: '../reviews/best-car-seats-uk-2025.html',
         price: 'Budget-friendly option',
         rating: '★★★★☆',
