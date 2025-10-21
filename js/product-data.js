@@ -110,23 +110,50 @@ const PRODUCT_DATA = {
     },
 
     // Baby Bouncers
+    'fisher-price-rainforest-bouncer': {
+        name: 'Fisher-Price Rainforest Bouncer',
+        image: 'https://m.media-amazon.com/images/I/61hlhHQOR2L._AC_SL1500_.jpg',
+        affiliateLink: 'https://uk-pre-prod.amazon.com/Fisher-Price-CJN00-Rainforest-Removable-Vibrations/dp/B01ABUN4RY?&linkCode=ll1&tag=parentshopper-21&linkId=51b0dab980bb1e97c115095714fa77dd&language=en_GB&ref_=as_li_ss_tl',
+        reviewLink: '../reviews/best-baby-bouncers-uk-2025.html',
+        price: 'Budget-friendly option',
+        rating: '★★★★★',
+        ratingText: '(4.9/5 stars)'
+    },
     'babybjorn-bouncer-bliss': {
         name: 'BabyBjörn Bouncer Bliss',
-        image: 'https://m.media-amazon.com/images/I/61hlhHQOR2L._AC_SL1500_.jpg',
-        affiliateLink: 'https://uk-pre-prod.amazon.com/BabyBjorn-Bouncer-Bliss-Natural-Movement/dp/B01ABUN4RY?&linkCode=ll1&tag=parentshopper-21&linkId=51b0dab980bb1e97c115095714fa77dd&language=en_GB&ref_=as_li_ss_tl',
+        image: 'https://m.media-amazon.com/images/I/81jPPNZgqLL._AC_SL1500_.jpg',
+        affiliateLink: 'https://www.amazon.co.uk/BABYBJ%C3%96RN-Bouncer-Bliss-Jersey-Light/dp/B07NQLH4RV?th=1&linkCode=ll1&tag=parentshopper-21&linkId=3436e9ce05385f27ac1e666788fc27c6&language=en_GB&ref_=as_li_ss_tl',
         reviewLink: '../reviews/best-baby-bouncers-uk-2025.html',
         price: 'Premium choice',
         rating: '★★★★★',
         ratingText: '(4.9/5 stars)'
     },
-    'fisher-price-bouncer': {
-        name: 'Fisher-Price Bouncer',
-        image: 'https://m.media-amazon.com/images/I/61hlhHQOR2L._AC_SL1500_.jpg',
-        affiliateLink: 'https://www.amazon.co.uk/Fisher-Price-Bouncer-Comfort-Curve/dp/B01ABUN4RY?&linkCode=ll1&tag=parentshopper-21&linkId=51b0dab980bb1e97c115095714fa77dd&language=en_GB&ref_=as_li_ss_tl',
+    'maxi-cosi-kori': {
+        name: 'Maxi-Cosi Kori 2-in-1 Bouncer',
+        image: 'https://m.media-amazon.com/images/I/81CyB4FRcxL._AC_SL1500_.jpg',
+        affiliateLink: 'https://www.amazon.co.uk/Maxi-Cosi-Ergonomic-Positions-Lightweight-Graphite/dp/B0CHSBRLNV?crid=1U8S4UH15HA93&dib=eyJ2IjoiMSJ9.tw_q0P7RkNqNRKiM7CFO89HnSAAvnBQRaEusij364N-_42WrzSa7fJlrj7Ra8XZT6LX9qiRAiNmobXLTomZzjnSPEWbz6lOwJiv1KVGuyaJsZ0zlsg7xtGw_9ATQ2vDbIcpmJLCy2UsoAvvZ383MZ_-4ydHaSC0g6TKXHgQWRJXHr7vWOVNHsLSmGxfUJsno6aZ7p6LlyKFhA4OE9Aw4t6IjbWQ7tBTz20XpwJgLbMQWxY3YvEY3XU8ilbWA_LB5f1_Fir_b7o0_wZP0ySFMw2ha-SkwhmvRilGCmCUeGyQ.CkD5SJJ1YTJVDdAhnw2f9CVdMGVHHpQUAPgDb4d07MU&dib_tag=se&keywords=Maxi-Cosi%2BKori%2B2-in-1%2BBouncer&qid=1760702155&s=baby&sprefix=maxi-cosi%2Bkori%2B2-in-1%2Bbouncer%2Cbaby%2C316&sr=1-2&th=1&linkCode=ll1&tag=parentshopper-21&linkId=def084b9b071c7ddd2060c6cda133b7e&language=en_GB&ref_=as_li_ss_tl',
+        reviewLink: '../reviews/best-baby-bouncers-uk-2025.html',
+        price: 'Mid-range pick',
+        rating: '★★★★★',
+        ratingText: '(4.8/5 stars)'
+    },
+    'ingenuity-morrison': {
+        name: 'Ingenuity Morrison Soothing Bouncer',
+        image: 'https://m.media-amazon.com/images/I/71j+4i4UlfL._AC_SL1500_.jpg',
+        affiliateLink: 'https://www.amazon.co.uk/Ingenuity-11203-3-Cradling-BouncerTM-Morrison/dp/B072342MVR?th=1&linkCode=ll1&tag=parentshopper-21&linkId=13e00e8b286128b69f2654a1ab12a11b&language=en_GB&ref_=as_li_ss_tl',
         reviewLink: '../reviews/best-baby-bouncers-uk-2025.html',
         price: 'Budget-friendly option',
         rating: '★★★★☆',
-        ratingText: '(4.5/5 stars)'
+        ratingText: '(4.3/5 stars)'
+    },
+    'ladida-safari': {
+        name: 'LADIDA Safari Theme Bouncer',
+        image: 'https://m.media-amazon.com/images/I/61aNaOHzY2L._AC_SL1500_.jpg',
+        affiliateLink: 'https://www.amazon.co.uk/LADIDA-Colourful-Bouncer-Soothing-Vibration/dp/B0963SJT8W?th=1&linkCode=ll1&tag=parentshopper-21&linkId=4b8000b5fc0cf2d60a00a7964c3a0116&language=en_GB&ref_=as_li_ss_tl',
+        reviewLink: '../reviews/best-baby-bouncers-uk-2025.html',
+        price: 'Ultra-budget option',
+        rating: '★★★☆☆',
+        ratingText: '(3.8/5 stars)'
     },
 
     // Travel Cots
