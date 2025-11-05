@@ -4,10 +4,11 @@
         <div class="product-image-container">
             <img src="{{ include.product_image }}" 
                  alt="{{ include.product_alt }}"
-                 loading="lazy"
+                 {% if include.product_number == 1 %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}
                  width="400"
                  height="400"
-                 style="width: 100%; max-height: 400px; height: auto; object-fit: contain; border-radius: 8px;">
+                 style="width: 100%; max-height: 400px; height: auto; object-fit: contain; border-radius: 8px;"
+                 decoding="async">
         </div>
         <div class="product-details">
             <h3 id="product-{{ include.product_number }}-title">{{ include.product_number }}. {{ include.product_name }} — {{ include.product_subtitle }}</h3>
