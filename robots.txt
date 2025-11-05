@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://parentshopper.co.uk/sitemap.xml
+Sitemap: https://parentshopper.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

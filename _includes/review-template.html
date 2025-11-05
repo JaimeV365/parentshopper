@@ -13,15 +13,15 @@ layout: review
 </nav>
 
 <!-- Article Header -->
-<article class="review-article" id="main-content">
+<article class="review-article" id="main-content" role="main" itemscope itemtype="https://schema.org/Article">
     <header class="article-header">
         <div class="container">
             <div class="article-meta">
                 <span>{{ page.category | default: "Product" }} Review</span>
-                <span class="article-date">Published: {{ page.date | date: "%B %Y" }}</span>
+                <time class="article-date" datetime="{{ page.date }}" itemprop="datePublished">Published: {{ page.date | date: "%B %Y" }}</time>
                 <span class="article-date">{{ page.read_time | default: "12" }} min read</span>
             </div>
-            <h1>{{ page.title }}</h1>
+            <h1 itemprop="headline">{{ page.title }}</h1>
             
             <div class="article-intro">
                 {% for intro in page.intro %}
@@ -59,15 +59,15 @@ layout: review
     </header>
 
     <!-- Comparison Table -->
-    <section class="comparison-table" id="comparison">
+    <section class="comparison-table" id="comparison" aria-labelledby="comparison-title">
         <div class="container">
-            <h2>{{ page.comparison.title }}</h2>
+            <h2 id="comparison-title">{{ page.comparison.title }}</h2>
             <div class="table-container" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
-                <table class="comparison-table-content" style="min-width: 600px;">
+                <table class="comparison-table-content" style="min-width: 600px;" role="table" aria-label="{{ page.comparison.title }}">
                     <thead>
                         <tr>
                             {% for header in page.comparison.headers %}
-                            <th>{{ header }}</th>
+                            <th scope="col">{{ header }}</th>
                             {% endfor %}
                         </tr>
                     </thead>
@@ -85,16 +85,29 @@ layout: review
         </div>
     </section>
 
-    <!-- Table of Contents -->
+    <!-- Quick Navigation -->
     <div class="container">
         <nav class="table-of-contents" style="background: #F8FAFC; border: 2px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
-            <h3 style="margin-bottom: 1rem; color: #1F2937; font-size: 1.125rem; font-weight: 600;">Table of Contents</h3>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin-bottom: 0.5rem;"><a href="#our-story" style="color: #059669; text-decoration: none; font-weight: 500;">Our Story</a></li>
-                <li style="margin-bottom: 0.5rem;"><a href="#top-picks" style="color: #059669; text-decoration: none; font-weight: 500;">Top Recommendations</a></li>
-                <li style="margin-bottom: 0.5rem;"><a href="#what-we-learned" style="color: #059669; text-decoration: none; font-weight: 500;">What We Learned</a></li>
-                <li style="margin-bottom: 0.5rem;"><a href="#what-to-avoid" style="color: #059669; text-decoration: none; font-weight: 500;">What to Avoid</a></li>
-                <li style="margin-bottom: 0.5rem;"><a href="#faq" style="color: #059669; text-decoration: none; font-weight: 500;">FAQ</a></li>
+            <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; margin-bottom: 1rem; color: #1f2937;">Quick Navigation</h2>
+            <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.5rem;">
+                <li><a href="#our-story" style="color: #059669; font-weight: 500; text-decoration: none;">📖 Our Story</a></li>
+                <li><a href="#top-picks" style="color: #059669; font-weight: 500; text-decoration: none;">🏆 Top Recommendations</a></li>
+                {% for product in page.products %}
+                <li><a href="#product-{{ product.number }}" style="color: #059669; font-weight: 500; text-decoration: none;">{{ product.number }}️⃣ {{ product.name | truncate: 30 }}</a></li>
+                {% endfor %}
+                <li><a href="#comparison" style="color: #059669; font-weight: 500; text-decoration: none;">⚖️ Comparison Table</a></li>
+                {% if page.what_we_learned %}
+                <li><a href="#what-we-learned" style="color: #059669; font-weight: 500; text-decoration: none;">💡 What We Learned</a></li>
+                {% endif %}
+                {% if page.what_to_avoid %}
+                <li><a href="#what-to-avoid" style="color: #059669; font-weight: 500; text-decoration: none;">⚠️ What to Avoid</a></li>
+                {% endif %}
+                {% if page.final_verdict %}
+                <li><a href="#final-verdict" style="color: #059669; font-weight: 500; text-decoration: none;">✅ Final Verdict</a></li>
+                {% endif %}
+                {% if page.faqs %}
+                <li><a href="#faq" style="color: #059669; font-weight: 500; text-decoration: none;">❓ FAQ</a></li>
+                {% endif %}
             </ul>
         </nav>
     </div>
@@ -147,15 +160,6 @@ layout: review
         </div>
     </section>
 
-    <!-- Alternative Retailers Note -->
-    <section class="alternative-retailers">
-        <div class="container">
-            <div style="background: #FEF3C7; border: 1px solid #F59E0B; border-radius: 8px; padding: 12px; margin: 16px 0; font-size: 0.9rem;">
-                <strong>Alternative Retailers:</strong> These products are also available at Argos, John Lewis, and other UK retailers. Check current prices and availability before purchasing.
-            </div>
-        </div>
-    </section>
-
     <!-- What We Learned Section -->
     <section class="problem-section" id="what-we-learned">
         <div class="container">
@@ -188,16 +192,18 @@ layout: review
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq" id="faq">
+    <section class="faq" id="faq" aria-labelledby="faq-title">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
+            <h2 id="faq-title">Frequently Asked Questions</h2>
             
             {% for faq in page.faqs %}
-            <div class="faq-item">
-                <h3>{{ faq.question }}</h3>
-                {% for answer in faq.answers %}
-                <p style="max-width: none;">{{ answer }}</p>
-                {% endfor %}
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">{{ faq.question }}</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    {% for answer in faq.answers %}
+                    <p style="max-width: none;" itemprop="text">{{ answer }}</p>
+                    {% endfor %}
+                </div>
             </div>
             {% endfor %}
         </div>
@@ -236,7 +242,9 @@ layout: review
                         <img src="{{ related.image }}" 
                              alt="{{ related.alt }}" 
                              class="related-article-image"
-                             loading="lazy">
+                             loading="lazy"
+                             width="300"
+                             height="200">
                     </a>
                     <div class="related-article-content">
                         <a href="{{ related.url | relative_url }}">
@@ -266,3 +274,102 @@ layout: review
         </div>
     </div>
 </article>
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Product",
+    "name": {{ page.quick_answer.product1.name | jsonify }},
+    "category": {{ page.category | jsonify }},
+    "image": {{ page.products[0].image | jsonify }},
+    "brand": {
+      "@type": "Brand",
+      "name": {{ page.quick_answer.product1.name | split: ' ' | first | jsonify }}
+    }
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "ParentShopper"
+  },
+  "reviewBody": {{ page.description | jsonify }},
+  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "itemListElement": [
+    {% for product in page.products %}
+    {
+      "@type": "ListItem",
+      "position": {{ product.number }},
+      "item": {
+        "@type": "Product",
+        "name": {{ product.name | jsonify }},
+        "image": {{ product.image | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}{{ '/' | relative_url }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Reviews",
+      "item": "{{ site.url }}{{ '/reviews/' | relative_url }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ page.title | jsonify }},
+      "item": "{{ site.url }}{{ page.url }}"
+    }
+  ]
+}
+</script>
+
+{% if page.faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in page.faqs %}
+    {
+      "@type": "Question",
+      "name": {{ faq.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ faq.answers | join: ' ' | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

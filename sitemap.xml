@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Homepage -->
     <url>
-        <loc>https://parentshopper.co.uk/</loc>
+        <loc>https://parentshopper.com/</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -10,37 +10,37 @@
     
     <!-- Category Pages -->
     <url>
-        <loc>https://parentshopper.co.uk/categories/</loc>
+        <loc>https://parentshopper.com/categories/</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://parentshopper.co.uk/categories/pushchairs.html</loc>
+        <loc>https://parentshopper.com/categories/pushchairs.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://parentshopper.co.uk/categories/car-seats.html</loc>
+        <loc>https://parentshopper.com/categories/car-seats.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://parentshopper.co.uk/categories/feeding.html</loc>
+        <loc>https://parentshopper.com/categories/feeding.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://parentshopper.co.uk/categories/sleep.html</loc>
+        <loc>https://parentshopper.com/categories/sleep.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://parentshopper.co.uk/categories/safety.html</loc>
+        <loc>https://parentshopper.com/categories/safety.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -48,43 +48,55 @@
     
     <!-- Review Articles -->
     <url>
-        <loc>https://parentshopper.co.uk/reviews/</loc>
+        <loc>https://parentshopper.com/reviews/</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://parentshopper.co.uk/reviews/best-baby-monitor-uk-2025.html</loc>
+        <loc>https://parentshopper.com/reviews/best-baby-monitor-uk.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://parentshopper.co.uk/reviews/best-bottle-prep-machines-uk-2025.html</loc>
+        <loc>https://parentshopper.com/reviews/best-bottle-prep-machines-uk.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://parentshopper.co.uk/reviews/best-nappy-bins-uk-2025.html</loc>
+        <loc>https://parentshopper.com/reviews/best-nappy-bins-uk.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://parentshopper.co.uk/reviews/best-car-seats-uk-2025.html</loc>
+        <loc>https://parentshopper.com/reviews/best-car-seats-uk.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://parentshopper.co.uk/reviews/best-travel-cots-uk-2025.html</loc>
+        <loc>https://parentshopper.com/reviews/best-travel-cots-uk.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://parentshopper.co.uk/reviews/best-pushchairs-uk-2025.html</loc>
+        <loc>https://parentshopper.com/reviews/best-pushchairs-uk.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://parentshopper.com/reviews/best-high-chairs-uk.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://parentshopper.com/reviews/best-baby-bouncers-uk.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -92,7 +104,7 @@
     
     <!-- Buying Guides -->
     <url>
-        <loc>https://parentshopper.co.uk/guides/first-time-parents.html</loc>
+        <loc>https://parentshopper.com/guides/first-time-parents.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -100,13 +112,13 @@
     
     <!-- About Pages -->
     <url>
-        <loc>https://parentshopper.co.uk/about.html</loc>
+        <loc>https://parentshopper.com/about.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://parentshopper.co.uk/affiliate-disclosure.html</loc>
+        <loc>https://parentshopper.com/affiliate-disclosure.html</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>

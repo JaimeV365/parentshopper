@@ -21,13 +21,14 @@ ParentShopper helps busy parents make smart purchasing decisions for baby and ch
 
 ## Reviews
 
-- [Best Baby Monitors UK 2025](https://parentshopper.com/reviews/best-baby-monitor-uk-2025.html)
-- [Best Pushchairs UK 2025](https://parentshopper.com/reviews/best-pushchairs-uk-2025.html)
-- [Best Car Seats UK 2025](https://parentshopper.com/reviews/best-car-seats-uk-2025.html)
-- [Best Bottle Prep Machines UK 2025](https://parentshopper.com/reviews/best-bottle-prep-machines-uk-2025.html)
-- [Best Baby Bouncers UK 2025](https://parentshopper.com/reviews/best-baby-bouncers-uk-2025.html)
-- [Best Travel Cots UK 2025](https://parentshopper.com/reviews/best-travel-cots-uk-2025.html)
-- [Best Nappy Bins UK 2025](https://parentshopper.com/reviews/best-nappy-bins-uk-2025.html)
+- [Best Baby Monitors UK 2026](https://parentshopper.com/reviews/best-baby-monitor-uk.html)
+- [Best Pushchairs UK 2026](https://parentshopper.com/reviews/best-pushchairs-uk.html)
+- [Best Car Seats UK 2026](https://parentshopper.com/reviews/best-car-seats-uk.html)
+- [Best Bottle Prep Machines UK 2026](https://parentshopper.com/reviews/best-bottle-prep-machines-uk.html)
+- [Best Baby Bouncers UK 2026](https://parentshopper.com/reviews/best-baby-bouncers-uk.html)
+- [Best Travel Cots UK 2026](https://parentshopper.com/reviews/best-travel-cots-uk.html)
+- [Best Nappy Bins UK 2026](https://parentshopper.com/reviews/best-nappy-bins-uk.html)
+- [Best High Chairs UK 2026](https://parentshopper.com/reviews/best-high-chairs-uk.html)
 
 ## Contact
 

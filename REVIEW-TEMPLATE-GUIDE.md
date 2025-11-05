@@ -27,7 +27,7 @@ This system provides a **unified, consistent structure** for all review pages, e
 ```yaml
 ---
 layout: review
-title: "Best [Product] UK 2025: [Compelling Title]"
+title: "Best [Product] UK 2026: [Compelling Title]"
 description: "[Brief description of review and key findings]"
 category: "[Product Category]"
 date: 2025-01-17
@@ -78,7 +78,7 @@ our_story:
 
 # Recommendations Section
 recommendations:
-  title: "Best [Product] UK 2025: Our Top [Number] Tested Recommendations"
+  title: "Best [Product] UK 2026: Our Top [Number] Tested Recommendations"
 
 # Products Array
 products:
@@ -110,7 +110,7 @@ products:
 
 # Comparison Table
 comparison:
-  title: "Quick Comparison: Best [Product] UK 2025"
+  title: "Quick Comparison: Best [Product] UK 2026"
   headers:
     - "[Product Category]"
     - "Price"
@@ -149,7 +149,7 @@ faqs:
 
 # Final Recommendation
 final_recommendation:
-  title: "Final Verdict: Best [Product] UK 2025 for Most Families"
+  title: "Final Verdict: Best [Product] UK 2026 for Most Families"
   verdicts:
     - title: "Our Top Recommendation"
       content: "[Recommendation content]"

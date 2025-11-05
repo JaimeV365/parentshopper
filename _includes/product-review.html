@@ -1,5 +1,5 @@
 <!-- Standardized Product Review Component -->
-<div class="product-review" id="product-{{ include.product_number }}">
+<div class="product-review" id="product-{{ include.product_number }}" role="region" aria-labelledby="product-{{ include.product_number }}-title">
     <div class="product-hero">
         <div class="product-image-container">
             <img src="{{ include.product_image }}" 
@@ -10,7 +10,7 @@
                  style="width: 100%; max-height: 400px; height: auto; object-fit: contain; border-radius: 8px;">
         </div>
         <div class="product-details">
-            <h3>{{ include.product_number }}. {{ include.product_name }} — {{ include.product_subtitle }}</h3>
+            <h3 id="product-{{ include.product_number }}-title">{{ include.product_number }}. {{ include.product_name }} — {{ include.product_subtitle }}</h3>
             <div class="product-rating">{{ include.product_rating }}</div>
             <div class="product-price">{{ include.product_price }}</div>
             <p class="product-verdict">{{ include.product_verdict }}</p>
@@ -24,7 +24,7 @@
             </div>
             {% endif %}
             <p class="product-verdict">{{ include.product_verdict_2 }}</p>
-            <a href="{{ include.product_link }}" class="btn btn-primary">View on Amazon</a>
+            <a href="{{ include.product_link }}" class="btn btn-primary" target="_blank" rel="nofollow noopener">View on Amazon</a>
         </div>
     </div>
     
