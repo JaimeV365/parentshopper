@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ParentShopper - Your Personal Shopping Guide for Parenting</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/brand/ParentShopper%20Logo.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/brand/ParentShopper%20Logo.ico">
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Learn about ParentShopper's mission to help busy parents make smart purchasing decisions through honest, research-based product reviews and recommendations.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About ParentShopper - Your Personal Shopping Guide for Parenting">
+    <meta property="og:description" content="Learn about ParentShopper's mission to help busy parents make smart purchasing decisions through honest, research-based product reviews and recommendations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:4000/how%20c5ab0df%20--name-only">
+    
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About ParentShopper - Your Personal Shopping Guide for Parenting">
+    <meta name="twitter:description" content="Learn about ParentShopper's mission to help busy parents make smart purchasing decisions through honest, research-based product reviews and recommendations.">
+    
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/how%20c5ab0df%20--name-only">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//m.media-amazon.com">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://m.media-amazon.com">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    
+    <!-- Load fonts efficiently -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/" class="logo-link">
+                        <img src="/images/brand/ParentShopper%20logo.png" alt="ParentShopper" class="logo-image" width="83" height="84" loading="eager">
+                        <span class="logo-text-brand">ParentShopper</span>
+                    </a>
+                </div>
+                <nav class="nav">
+    <ul class="nav-list">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/categories/" class="nav-link">Categories</a></li>
+        <li><a href="/reviews/" class="nav-link">Reviews</a></li>
+        <li><a href="/about.html" class="nav-link">About</a></li>
+    </ul>
+</nav>
+<button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <div class="container">
+        <a href="/">Home</a> > <a href="/how%20c5ab0df%20--name-only">About</a>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main id="main-content">
+    <section class="hero">
+        <div class="container">
+            <h1>About ParentShopper</h1>
+            <p class="page-subtitle">Your personal shopping guide for parenting - because every parent deserves honest, helpful advice</p>
+        </div>
+    </section>
+    <div class="container">
+        <section class="about-section">
+            <h2>Our Story</h2>
+            <p>ParentShopper was born from a simple frustration: too many parenting product reviews that felt like marketing copy, not real parent experiences.</p>
+            
+            <p>As parents ourselves, we've been through the overwhelming process of choosing the right products for our children. We've bought things that seemed perfect in reviews but didn't work for our real-life situations. We've wasted money on products that promised everything but delivered little.</p>
+            
+            <p>That's why we created ParentShopper - to cut through the noise and give you honest, practical advice from parents who've actually used these products in real-world situations.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>Our Approach</h2>
+            <div class="approach-grid">
+                <div class="approach-item">
+                    <h3>Real Parent Experiences</h3>
+                    <p>Every recommendation comes from actual parent experiences, not marketing departments. We test products in real homes with real children.</p>
+                </div>
+                
+                <div class="approach-item">
+                    <h3>Honest Reviews</h3>
+                    <p>We tell you what works, what doesn't, and what's worth your money. No product is perfect, and we're honest about limitations.</p>
+                </div>
+                
+                <div class="approach-item">
+                    <h3>Research-Based</h3>
+                    <p>When we don't have personal experience, we research extensively, analyzing hundreds of parent reviews and expert opinions.</p>
+                </div>
+                
+                <div class="approach-item">
+                    <h3>Time-Saving</h3>
+                    <p>We know you're busy. Our reviews get straight to the point, helping you make decisions quickly and confidently.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>Your Privacy Matters</h2>
+            <div class="privacy-grid">
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Cookie base -->
+                            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
+                            <path d="M8.5 8.5v.01"/>
+                            <path d="M16 15.5v.01"/>
+                            <path d="M12 12v.01"/>
+                            <path d="M11 17v.01"/>
+                            <path d="M7 14v.01"/>
+                            <!-- Small X overlay in bottom-right corner -->
+                            <g transform="translate(10.5, 10.5) scale(0.6)">
+                                <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor"/>
+                                <path d="m15 9-6 6"/>
+                                <path d="m9 9 6 6"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3>No Cookies</h3>
+                    <p>We don't use tracking cookies or store personal data. Your browsing remains private and anonymous.</p>
+                </div>
+                
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Cloud base - moved up more -->
+                            <g transform="translate(0, -3)">
+                                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+                            </g>
+                            <!-- Small X overlay in bottom-right corner -->
+                            <g transform="translate(10.5, 10.5) scale(0.6)">
+                                <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor"/>
+                                <path d="m15 9-6 6"/>
+                                <path d="m9 9 6 6"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3>No Cloud Storage</h3>
+                    <p>Your data never leaves your computer. All processing happens locally in your browser.</p>
+                </div>
+                
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Map pin base - moved left -->
+                            <g transform="translate(-3, 0)">
+                                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </g>
+                            <!-- Small X overlay in bottom-right corner -->
+                            <g transform="translate(10, 10) scale(0.6)">
+                                <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor"/>
+                                <path d="m15 9-6 6"/>
+                                <path d="m9 9 6 6"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3>No Tracking</h3>
+                    <p>We don't track your behavior, collect analytics, or share your data with third parties.</p>
+                </div>
+                
+                <div class="privacy-item">
+                    <div class="privacy-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- House base - moved left -->
+                            <g transform="translate(-2, 0)">
+                                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                                <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            </g>
+                            <!-- Small checkmark overlay in bottom-right corner -->
+                            <g transform="translate(10, 10) scale(0.6)">
+                                <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3>100% Local Processing</h3>
+                    <p>All analysis happens in your browser. No data is sent anywhere—in fact, ParentShopper works offline because there's no data transfer required.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>What Makes Us Different</h2>
+            <ul class="difference-list">
+                <li><strong>No sponsored content:</strong> We don't accept payment for positive reviews. Our opinions are genuinely ours.</li>
+                <li><strong>Real-world testing:</strong> We use products in actual parenting situations, not just in controlled environments.</li>
+                <li><strong>Long-term perspective:</strong> We consider how products perform over months and years, not just initial impressions.</li>
+                <li><strong>Budget-conscious:</strong> We understand that parenting is expensive. We help you find value, not just premium products.</li>
+                <li><strong>Safety first:</strong> Every recommendation meets current safety standards and best practices.</li>
+            </ul>
+        </section>
+
+        <section class="about-section">
+            <h2>Our Promise to You</h2>
+            <p>We promise to:</p>
+            <ul class="promise-list">
+                <li>Always be honest about product limitations and drawbacks</li>
+                <li>Update our recommendations as new information becomes available</li>
+                <li>Focus on products that genuinely help parents and children</li>
+                <li>Respect your time with clear, actionable advice</li>
+                <li>Maintain our independence from product manufacturers</li>
+            </ul>
+        </section>
+
+        <section class="about-section">
+            <h2>How We Make Money</h2>
+            <p>We're transparent about our business model. We earn small commissions when you purchase products through our affiliate links. This doesn't cost you anything extra, but it helps us continue researching and reviewing products.</p>
+            
+            <p>Our affiliate relationships never influence our recommendations. We recommend products we genuinely believe in, regardless of commission rates. You can read more about this in our <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
+        </section>
+
+    </div>
+</main>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ParentShopper</h3>
+                <p>Real parent reviews for real parents. No sponsored content, just honest recommendations.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="/categories/feeding.html">Feeding</a></li>
+                    <li><a href="/categories/sleep.html">Sleep</a></li>
+                    <li><a href="/categories/pushchairs.html">Pushchairs</a></li>
+                    <li><a href="/categories/car-seats.html">Car Seats</a></li>
+                    <li><a href="/categories/safety.html">Safety</a></li>
+                    <li><a href="/categories/travel.html">Travel</a></li>
+                    <li><a href="/categories/home-nursery.html">Home & Nursery</a></li>
+                    <li><a href="/categories/gifts.html">Gifts</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Reviews</h4>
+                <ul>
+                    <li><a href="/reviews/best-baby-monitor-uk.html">Baby Monitors</a></li>
+                    <li><a href="/reviews/best-pushchairs-uk.html">Pushchairs</a></li>
+                    <li><a href="/reviews/best-car-seats-uk.html">Car Seats</a></li>
+                    <li><a href="/reviews/best-baby-bouncers-uk.html">Baby Bouncers</a></li>
+                    <li><a href="/reviews/best-bottle-prep-machines-uk.html">Bottle Prep Machines</a></li>
+                    <li><a href="/reviews/best-high-chairs-uk.html">High Chairs</a></li>
+                    <li><a href="/reviews/best-travel-cots-uk.html">Travel Cots</a></li>
+                    <li><a href="/reviews/best-nappy-bins-uk.html">Nappy Bins</a></li>
+                    <li><a href="/reviews/best-potty-training-sets-uk.html">Potty Training Sets</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ParentShopper. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>

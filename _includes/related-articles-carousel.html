@@ -1,0 +1,101 @@
+<!-- Related Articles Carousel - Reusable Component -->
+<!-- This can be included in any review page to show the dynamic carousel -->
+<section class="featured" aria-labelledby="related-articles-title">
+    <div class="container">
+        <h2 class="section-title" id="related-articles-title" style="text-align: center;">Related Articles</h2>
+        
+        <!-- Generate all reviews data for JavaScript (auto-updates when new reviews are added) -->
+        <script type="application/json" id="all-reviews-data">
+        [
+            {% assign current_url = page.url %}
+            {% assign first_item = true %}
+            
+            {% comment %}First, try to get from data file if it exists{% endcomment %}
+            {% if site.data.reviews %}
+                {% for review in site.data.reviews %}
+                    {% if review.url != current_url %}
+                        {% unless first_item %},{% endunless %}{% assign first_item = false %}
+            {
+                "title": {{ review.title | jsonify }},
+                "url": "{{ review.url | relative_url }}",
+                "image": "{{ review.image }}",
+                "description": {{ review.description | jsonify }}
+            }
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            
+            {% comment %}Also add any reviews with layout: review from site.pages{% endcomment %}
+            {% for review in site.pages %}
+                {% if review.layout == 'review' and review.url != current_url and review.url != '/reviews/example-review.html' %}
+                    {% assign already_included = false %}
+                    {% if site.data.reviews %}
+                        {% for data_review in site.data.reviews %}
+                            {% if data_review.url == review.url %}
+                                {% assign already_included = true %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    {% unless already_included %}
+                        {% unless first_item %},{% endunless %}{% assign first_item = false %}
+            {
+                "title": {{ review.title | jsonify }},
+                "url": "{{ review.url | relative_url }}",
+                "image": "{{ review.image | default: '' }}",
+                "description": {{ review.description | default: '' | jsonify }}
+            }
+                    {% endunless %}
+                {% endif %}
+            {% endfor %}
+        ]
+        </script>
+
+        <!-- Swiper Carousel Container -->
+        <div class="swiper related-articles-swiper" id="related-articles-carousel" role="region" aria-label="Related articles carousel">
+            <div class="swiper-wrapper" id="related-articles-wrapper" role="list">
+                <!-- Fallback: Show static articles if JavaScript fails -->
+                {% if page.related_articles %}
+                    {% for related in page.related_articles limit:4 %}
+                    <div class="swiper-slide" role="listitem">
+                        <div class="related-article-card">
+                            <a href="{{ related.url | relative_url }}" aria-label="Read article: {{ related.title }}">
+                                <img src="{{ related.image }}" 
+                                     alt="{{ related.alt | default: related.title }}" 
+                                     class="related-article-image"
+                                     loading="lazy"
+                                     width="300"
+                                     height="200"
+                                     decoding="async">
+                            </a>
+                            <div class="related-article-content">
+                                <a href="{{ related.url | relative_url }}" aria-label="Read article: {{ related.title }}">
+                                    <h3>{{ related.title }}</h3>
+                                </a>
+                                <p>{{ related.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <!-- Fallback message if no related articles -->
+                    <div class="swiper-slide">
+                        <p style="text-align: center; padding: 2rem;">More articles coming soon...</p>
+                    </div>
+                {% endif %}
+            </div>
+            <!-- Navigation arrows -->
+            <button class="swiper-button-next" style="display: block !important;" aria-label="Next related articles" type="button"></button>
+            <button class="swiper-button-prev" style="display: block !important;" aria-label="Previous related articles" type="button"></button>
+            <!-- Pagination dots -->
+            <div class="swiper-pagination" style="display: block !important;" role="tablist" aria-label="Related articles pagination"></div>
+        </div>
+        
+        <!-- Debug: Check if scripts are loading -->
+        <noscript>
+            <p style="text-align: center; color: #DC2626; padding: 1rem;">
+                ⚠️ JavaScript is required for the carousel. Please enable JavaScript to see all related articles.
+            </p>
+        </noscript>
+    </div>
+</section>
+
