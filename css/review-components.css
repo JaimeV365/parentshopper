@@ -25,8 +25,8 @@
 .btn:focus,
 a:focus,
 button:focus {
-    outline: 3px solid #DC8B07;
-    outline-offset: 2px;
+    outline: 3px solid var(--focus-ring-color, #111827);
+    outline-offset: 4px;
 }
 
 .btn:focus:not(:focus-visible),
@@ -38,15 +38,15 @@ button:focus:not(:focus-visible) {
 .btn:focus-visible,
 a:focus-visible,
 button:focus-visible {
-    outline: 3px solid #DC8B07;
-    outline-offset: 2px;
+    outline: 3px solid var(--focus-ring-color, #111827);
+    outline-offset: 4px;
 }
 
 /* Swiper button focus states */
 .swiper-button-next:focus,
 .swiper-button-prev:focus {
-    outline: 3px solid #DC8B07;
-    outline-offset: 2px;
+    outline: 3px solid var(--focus-ring-color, #111827);
+    outline-offset: 4px;
 }
 
 .swiper-button-next:focus:not(:focus-visible),
@@ -56,8 +56,8 @@ button:focus-visible {
 
 .swiper-button-next:focus-visible,
 .swiper-button-prev:focus-visible {
-    outline: 3px solid #DC8B07;
-    outline-offset: 2px;
+    outline: 3px solid var(--focus-ring-color, #111827);
+    outline-offset: 4px;
 }
 
 /* ============================================
@@ -689,15 +689,20 @@ p.text-full-width {
 .related-articles-swiper .swiper-pagination-bullet {
     background: #DC8B07;
     opacity: 0.3;
-    width: 10px;
-    height: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .related-articles-swiper .swiper-pagination-bullet-active {
     opacity: 1;
-    width: 24px;
-    border-radius: 5px;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
 }
 
 /* Mobile: Hide navigation buttons, show pagination, enable touch gestures */
