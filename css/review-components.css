@@ -281,17 +281,30 @@ p.text-full-width {
 
 .table-of-contents a {
     color: #059669;
-    font-weight: 500;
-    text-decoration: none;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 /* ============================================
    PRODUCT IMAGE STYLING
    ============================================ */
+.product-image-container {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8FAFC;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 .product-image-container img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
     border-radius: 8px;
 }
 

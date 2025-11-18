@@ -113,7 +113,7 @@ const PRODUCT_DATA = {
     'fisher-price-rainforest-bouncer': {
         name: 'Fisher-Price Rainforest Bouncer',
         image: 'https://m.media-amazon.com/images/I/61hlhHQOR2L._AC_SL1500_.jpg',
-        affiliateLink: 'https://uk-pre-prod.amazon.com/Fisher-Price-CJN00-Rainforest-Removable-Vibrations/dp/B01ABUN4RY?&linkCode=ll1&tag=parentshopper-21&linkId=51b0dab980bb1e97c115095714fa77dd&language=en_GB&ref_=as_li_ss_tl',
+        affiliateLink: 'https://www.amazon.co.uk/Fisher-Rainforest-Friends-Comfort-Bouncer/dp/B00PI0HKIM?linkCode=ll1&tag=parentshopper-21&linkId=e48a5be9f8a7ec2d0d93a7f49ef0c5d2&language=en_GB&ref_=as_li_ss_tl',
         reviewLink: '../reviews/best-baby-bouncers-uk.html',
         price: 'Budget-friendly option',
         rating: '★★★★★',
@@ -158,9 +158,9 @@ const PRODUCT_DATA = {
 
     // Travel Cots
     'hauck-sleep-n-play': {
-        name: 'Hauck Sleep n Play Travel Cot',
-        image: 'https://m.media-amazon.com/images/I/81uW9ZRn8FL._AC_SL1500_.jpg',
-        affiliateLink: 'https://www.amazon.co.uk/Hauck-Bassinet-Changing-Mattress-Multicolour/dp/B00NFW6BZ8?&linkCode=ll1&tag=parentshopper-21&linkId=25f4db83e7646f2547ea0becdd2a8428&language=en_GB&ref_=as_li_ss_tl',
+        name: 'Hauck Dream N Play Plus Travel Cot',
+        image: 'https://m.media-amazon.com/images/I/716C18SiLtL._AC_SL1500_.jpg',
+        affiliateLink: 'https://www.amazon.co.uk/hauck-Dream-Play-Plus-Grey/dp/B0DJR2DRZ1?linkCode=ll1&tag=parentshopper-21&linkId=178ec9478f4a09b49f10b6014f68b6d0&language=en_GB&ref_=as_li_ss_tl',
         reviewLink: '../reviews/best-travel-cots-uk.html',
         price: 'Mid-range pick',
         rating: '★★★★★',

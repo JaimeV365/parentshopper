@@ -133,7 +133,7 @@ a:hover {
 .logo a img,
 img[alt*="ParentShopper"] {
   height: 64px !important;
-  width: auto !important;
+  width: 83px !important;
   max-width: 250px !important;
   max-height: 64px !important;
   display: block !important;
@@ -141,6 +141,7 @@ img[alt*="ParentShopper"] {
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
+  aspect-ratio: 83 / 84 !important;
 }
 
 /* Logo Text */
@@ -188,6 +189,13 @@ img[alt*="ParentShopper"] {
 .nav-link:hover,
 .nav-link:focus-visible {
   color: var(--color-accent);
+}
+
+.nav-link.active {
+  color: var(--color-accent);
+  font-weight: 700;
+  background-color: rgba(220, 139, 7, 0.08);
+  border: 1px solid rgba(220, 139, 7, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -465,6 +473,16 @@ img[alt*="ParentShopper"] {
 
 .product-preview {
   text-align: center;
+}
+
+.product-preview img,
+.featured-card img {
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: #F8FAFC;
+  border-radius: var(--radius-md);
 }
 
 .product-image-placeholder {

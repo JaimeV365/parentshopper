@@ -66,6 +66,47 @@
     {{ page.schema | jsonify }}
     </script>
     {% endif %}
+    
+    <!-- Organization schema for homepage -->
+    {% if page.url == '/' or page.url == '/index.html' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ParentShopper",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.url }}/images/brand/ParentShopper%20logo.png",
+      "description": "{{ site.description }}",
+      "sameAs": [],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ParentShopper",
+      "url": "{{ site.url }}",
+      "description": "{{ site.description }}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ParentShopper",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}/images/brand/ParentShopper%20logo.png"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ site.url }}/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    {% endif %}
 </head>
 <body>
     <!-- Header -->
@@ -74,7 +115,7 @@
             <div class="header-content">
                 <div class="logo">
                     <a href="{{ '/' | relative_url }}" class="logo-link">
-                        <img src="{{ '/images/brand/ParentShopper logo.png' | relative_url }}" alt="ParentShopper" class="logo-image" width="83" height="84" loading="eager">
+                        <img src="{{ '/images/brand/ParentShopper logo.png' | relative_url }}" alt="" class="logo-image" width="83" height="84" loading="eager" aria-hidden="true">
                         <span class="logo-text-brand">ParentShopper</span>
                     </a>
                 </div>

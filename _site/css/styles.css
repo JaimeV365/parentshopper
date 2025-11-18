@@ -10,6 +10,7 @@
   --color-background: #FFFFFF;
   --color-background-subtle: #F8FAFC;
   --color-background-light: #F1F5F9;
+  --focus-ring-color: #111827;
   
   /* Typography */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -132,7 +133,7 @@ a:hover {
 .logo a img,
 img[alt*="ParentShopper"] {
   height: 64px !important;
-  width: auto !important;
+  width: 83px !important;
   max-width: 250px !important;
   max-height: 64px !important;
   display: block !important;
@@ -140,6 +141,7 @@ img[alt*="ParentShopper"] {
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
+  aspect-ratio: 83 / 84 !important;
 }
 
 /* Logo Text */
@@ -175,9 +177,17 @@ img[alt*="ParentShopper"] {
   font-weight: 500;
   color: var(--color-primary);
   transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: var(--radius-sm);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus-visible {
   color: var(--color-accent);
 }
 
@@ -198,6 +208,9 @@ img[alt*="ParentShopper"] {
   padding: var(--spacing-xs);
   z-index: 1001;
   position: relative;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: var(--radius-sm);
 }
 
 .mobile-menu-toggle span {
@@ -453,6 +466,16 @@ img[alt*="ParentShopper"] {
 
 .product-preview {
   text-align: center;
+}
+
+.product-preview img,
+.featured-card img {
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: #F8FAFC;
+  border-radius: var(--radius-md);
 }
 
 .product-image-placeholder {
@@ -800,8 +823,21 @@ a.skip-link:focus {
 button:focus,
 input:focus,
 a:focus {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus-ring-color);
+  outline-offset: 4px;
+}
+
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--focus-ring-color);
+  outline-offset: 4px;
 }
 
 /* High contrast mode support */

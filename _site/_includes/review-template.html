@@ -377,15 +377,20 @@
     "@type": "Product",
     "name": {{ page.quick_answer.product1.name | jsonify }},
     "category": {{ page.category | jsonify }},
-    "image": {{ page.products[0].image | jsonify }},
+    "image": {% if page.products[0].image %}{{ page.products[0].image | jsonify }}{% else %}{{ page.image | jsonify }}{% endif %}{% if page.quick_answer.product1.description %},
+    "description": {{ page.quick_answer.product1.description | jsonify }}{% endif %}{% if page.products[0].brand %},
     "brand": {
       "@type": "Brand",
-      "name": {{ page.quick_answer.product1.name | split: ' ' | first | jsonify }}
-    }
+      "name": {{ page.products[0].brand | jsonify }}
+    }{% else %},
+    "brand": {
+      "@type": "Brand",
+      "name": {{ page.quick_answer.product1.name | split: ' ' | slice: 0, 2 | join: ' ' | jsonify }}
+    }{% endif %}
   },
   "reviewRating": {
     "@type": "Rating",
-    "ratingValue": "5",
+    "ratingValue": {% if page.rating %}{{ page.rating }}{% else %}"5"{% endif %},
     "bestRating": "5"
   },
   "author": {
@@ -399,7 +404,9 @@
     "url": "{{ site.url }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.url }}/images/brand/ParentShopper%20logo.png"
+      "url": "{{ site.url }}/images/brand/ParentShopper%20logo.png",
+      "width": 83,
+      "height": 84
     }
   },
   "reviewBody": {{ page.description | jsonify }},
@@ -408,7 +415,8 @@
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ site.url }}{{ page.url }}"
-  }
+  },
+  "headline": {{ page.title | jsonify }}
 }
 </script>
 
