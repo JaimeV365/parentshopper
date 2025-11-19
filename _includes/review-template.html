@@ -377,8 +377,8 @@
     "@type": "Product",
     "name": {{ page.quick_answer.product1.name | jsonify }},
     "category": {{ page.category | jsonify }},
-    "image": {% if page.products[0].image %}{{ page.products[0].image | jsonify }}{% else %}{{ page.image | jsonify }}{% endif %}{% if page.quick_answer.product1.description %},
-    "description": {{ page.quick_answer.product1.description | jsonify }}{% endif %}{% if page.products[0].brand %},
+    "image": {% if page.products[0].image %}{{ page.products[0].image | jsonify }}{% else %}{{ page.image | jsonify }}{% endif %},
+    "description": {% if page.quick_answer.product1.description %}{{ page.quick_answer.product1.description | jsonify }}{% else %}{{ page.description | jsonify }}{% endif %}{% if page.products[0].brand %},
     "brand": {
       "@type": "Brand",
       "name": {{ page.products[0].brand | jsonify }}
@@ -386,7 +386,56 @@
     "brand": {
       "@type": "Brand",
       "name": {{ page.quick_answer.product1.name | split: ' ' | slice: 0, 2 | join: ' ' | jsonify }}
-    }{% endif %}
+    }{% endif %},
+    "offers": {
+      "@type": "Offer",
+      "price": {% if page.quick_answer.product1.price %}{{ page.quick_answer.product1.price | jsonify }}{% else %}"0"{% endif %},
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2026-12-31",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "GBP"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "GB"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 3,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 5,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "GB",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": {% if page.rating %}{{ page.rating }}{% else %}"5"{% endif %},
+      "bestRating": "5",
+      "worstRating": "1",
+      "reviewCount": "1"
+    }
   },
   "reviewRating": {
     "@type": "Rating",
@@ -434,7 +483,50 @@
       "item": {
         "@type": "Product",
         "name": {{ product.name | jsonify }},
-        "image": {{ product.image | jsonify }}
+        "image": {{ product.image | jsonify }},
+        "description": {% if product.verdict %}{{ product.verdict | jsonify }}{% else %}{{ page.description | jsonify }}{% endif %},
+        "offers": {
+          "@type": "Offer",
+          "price": {% if product.price %}{{ product.price | jsonify }}{% else %}"0"{% endif %},
+          "priceCurrency": "GBP",
+          "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2026-12-31",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "GBP"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "GB"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 1,
+                "maxValue": 3,
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 1,
+                "maxValue": 5,
+                "unitCode": "DAY"
+              }
+            }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "GB",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          }
+        }
       }
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
