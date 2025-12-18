@@ -568,14 +568,6 @@
   font-style: italic;
 }
 
-/* Active nav link */
-.nav-link.active {
-  color: var(--color-accent);
-  font-weight: 700;
-  background-color: rgba(220, 139, 7, 0.08);
-  border: 1px solid rgba(220, 139, 7, 0.2);
-}
-
 /* Product Hero Section for Individual Reviews */
 .product-hero-section {
   padding: var(--spacing-xl) 0;

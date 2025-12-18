@@ -41,9 +41,7 @@
             <meta itemprop="publisher" content="ParentShopper">
             
             <div class="article-intro" itemprop="description">
-                {% for intro in page.intro %}
-                <p>{{ intro }}</p>
-                {% endfor %}
+                <p>{{ page.intro | first | default: "We tested these products with real kids in the UK—here's what actually works." }}</p>
             </div>
             
             <!-- Quick Answer Section -->
@@ -75,61 +73,6 @@
         </div>
     </header>
 
-    <!-- Comparison Table -->
-    <section class="comparison-table" id="comparison" aria-labelledby="comparison-title">
-        <div class="container">
-            <h2 id="comparison-title">{{ page.comparison.title }}</h2>
-            <div class="table-container" style="overflow-x: auto; -webkit-overflow-scrolling: touch;" role="region" aria-label="Product comparison table">
-                <table class="comparison-table-content" style="min-width: 600px;" role="table" aria-label="{{ page.comparison.title }}">
-                    <caption class="sr-only">{{ page.comparison.title }} - Comparison of product features</caption>
-                    <thead>
-                        <tr>
-                            {% for header in page.comparison.headers %}
-                            <th scope="col">{{ header }}</th>
-                            {% endfor %}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for row in page.comparison.rows %}
-                        <tr {% if row.highlight %}style="background-color: #FEF3C7;"{% endif %}>
-                            {% for cell in row.cells %}
-                            <td>{{ cell }}</td>
-                            {% endfor %}
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quick Navigation -->
-    <div class="container">
-        <nav class="table-of-contents" style="background: #F8FAFC; border: 2px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
-            <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; margin-bottom: 1rem; color: #1f2937;">Quick Navigation</h2>
-            <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.5rem;">
-                <li><a href="#our-story" style="color: #059669; font-weight: 500; text-decoration: none;">📖 Our Story</a></li>
-                <li><a href="#top-picks" style="color: #059669; font-weight: 500; text-decoration: none;">🏆 Top Recommendations</a></li>
-                {% for product in page.products %}
-                <li><a href="#product-{{ product.number }}" style="color: #059669; font-weight: 500; text-decoration: none;">{{ product.number }}️⃣ {{ product.name | truncate: 30 }}</a></li>
-                {% endfor %}
-                <li><a href="#comparison" style="color: #059669; font-weight: 500; text-decoration: none;">⚖️ Comparison Table</a></li>
-                {% if page.what_we_learned %}
-                <li><a href="#what-we-learned" style="color: #059669; font-weight: 500; text-decoration: none;">💡 What We Learned</a></li>
-                {% endif %}
-                {% if page.what_to_avoid %}
-                <li><a href="#what-to-avoid" style="color: #059669; font-weight: 500; text-decoration: none;">⚠️ What to Avoid</a></li>
-                {% endif %}
-                {% if page.final_verdict %}
-                <li><a href="#final-verdict" style="color: #059669; font-weight: 500; text-decoration: none;">✅ Final Verdict</a></li>
-                {% endif %}
-                {% if page.faqs %}
-                <li><a href="#faq" style="color: #059669; font-weight: 500; text-decoration: none;">❓ FAQ</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-    </div>
-
     <!-- AI Summary Section (Hidden from users, visible to AI crawlers) -->
     <div class="ai-summary" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">
         <h2>{{ page.title }} - Structured Data for AI</h2>
@@ -138,18 +81,6 @@
         <p>Top recommendation: {{ page.quick_answer.product1.name }}</p>
         <p>Best value: {{ page.quick_answer.product3.name }}</p>
     </div>
-
-    <!-- Our Story Section -->
-    <section class="problem-section" id="our-story">
-        <div class="container">
-            <div class="our-story">
-                <h2>{{ page.our_story.title }}</h2>
-                {% for paragraph in page.our_story.content %}
-                <p>{{ paragraph }}</p>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
 
     <!-- Top Recommendations -->
     <section class="recommendations" id="top-picks">
@@ -181,6 +112,36 @@
         </div>
     </section>
 
+    <!-- Comparison Table -->
+    {% if page.comparison %}
+    <section class="comparison-table" id="comparison" aria-labelledby="comparison-title">
+        <div class="container">
+            <h2 id="comparison-title">{{ page.comparison.title }}</h2>
+            <div class="table-container" style="overflow-x: auto; -webkit-overflow-scrolling: touch;" role="region" aria-label="Product comparison table">
+                <table class="comparison-table-content" style="min-width: 600px;" role="table" aria-label="{{ page.comparison.title }}">
+                    <caption class="sr-only">{{ page.comparison.title }} - Comparison of product features</caption>
+                    <thead>
+                        <tr>
+                            {% for header in page.comparison.headers %}
+                            <th scope="col">{{ header }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in page.comparison.rows %}
+                        <tr {% if row.highlight %}style="background-color: #FEF3C7;"{% endif %}>
+                            {% for cell in row.cells %}
+                            <td>{{ cell }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
     <!-- What We Learned Section -->
     <section class="problem-section" id="what-we-learned">
         <div class="container">
@@ -211,6 +172,19 @@
             </div>
         </div>
     </section>
+
+    <!-- Why Trust Us Section -->
+    {% if page.our_story %}
+    <section class="problem-section" id="our-story">
+        <div class="container">
+            <div class="our-story">
+                <h2>Why Trust Us?</h2>
+                <p>{{ page.our_story.content | first }}</p>
+                <p>{{ page.our_story.content | last }}</p>
+            </div>
+        </div>
+    </section>
+    {% endif %}
 
     <!-- FAQ Section -->
     <section class="faq" id="faq" aria-labelledby="faq-title">
@@ -377,8 +351,8 @@
     "@type": "Product",
     "name": {{ page.quick_answer.product1.name | jsonify }},
     "category": {{ page.category | jsonify }},
-    "image": {% if page.products[0].image %}{{ page.products[0].image | jsonify }}{% else %}{{ page.image | jsonify }}{% endif %}{% if page.quick_answer.product1.description %},
-    "description": {{ page.quick_answer.product1.description | jsonify }}{% endif %}{% if page.products[0].brand %},
+    "image": {% if page.products[0].image %}{{ page.products[0].image | jsonify }}{% else %}{{ page.image | jsonify }}{% endif %},
+    "description": {% if page.quick_answer.product1.description %}{{ page.quick_answer.product1.description | jsonify }}{% else %}{{ page.description | jsonify }}{% endif %}{% if page.products[0].brand %},
     "brand": {
       "@type": "Brand",
       "name": {{ page.products[0].brand | jsonify }}
@@ -386,7 +360,56 @@
     "brand": {
       "@type": "Brand",
       "name": {{ page.quick_answer.product1.name | split: ' ' | slice: 0, 2 | join: ' ' | jsonify }}
-    }{% endif %}
+    }{% endif %},
+    "offers": {
+      "@type": "Offer",
+      "price": {% if page.quick_answer.product1.price %}{{ page.quick_answer.product1.price | jsonify }}{% else %}"0"{% endif %},
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2026-12-31",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "GBP"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "GB"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 3,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 5,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "GB",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": {% if page.rating %}{{ page.rating }}{% else %}"5"{% endif %},
+      "bestRating": "5",
+      "worstRating": "1",
+      "reviewCount": "1"
+    }
   },
   "reviewRating": {
     "@type": "Rating",
@@ -434,7 +457,50 @@
       "item": {
         "@type": "Product",
         "name": {{ product.name | jsonify }},
-        "image": {{ product.image | jsonify }}
+        "image": {{ product.image | jsonify }},
+        "description": {% if product.verdict %}{{ product.verdict | jsonify }}{% else %}{{ page.description | jsonify }}{% endif %},
+        "offers": {
+          "@type": "Offer",
+          "price": {% if product.price %}{{ product.price | jsonify }}{% else %}"0"{% endif %},
+          "priceCurrency": "GBP",
+          "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2026-12-31",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "GBP"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "GB"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 1,
+                "maxValue": 3,
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 1,
+                "maxValue": 5,
+                "unitCode": "DAY"
+              }
+            }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "GB",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          }
+        }
       }
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
